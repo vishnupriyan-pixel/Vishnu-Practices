@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+         ///to create a str from a gn str changing the position of first and last charcters.
+
+      function first_last(str)
+      {
+          if (str.length <= 1) 
+          {
+              return str;
+          }
+
+          mid_char = str.substring(1,str.length - 1);
+          
+          return(str.charAt(str.length-1)) + mid_char + str.charAt(0);
+      }
+
+      console.log(first_last('think'));
+
+      //////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///to create a new string from a gn string with first charcter of the gn string added at frnt and back.
+
+      function frnt_back(str)
+      {
+          first = str.substring(0,1);
+
+          return first + str + first;
+      }
+
+      console.log(frnt_back('Hello'));
+      console.log(frnt_back('World'));
+      console.log(frnt_back('Imagine'));
+
+      /////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///check whether a gn positive num is a multiple of 3 or multiple of 7.
+
+      function multiply(a)
+      {
+          if (a % 3 == 0 || a % 7 == 0) 
+          {
+              return true;
+          }
+
+          else
+          {
+              return false;
+          }
+      }
+
+      console.log(multiply(15));
+      console.log(multiply(66));
+      console.log(multiply(79));
+      console.log(multiply(100));
+
+      ////////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///create a new string frm a gn string taking the last 3 charcters and added at both front and back.
+      
+      function front_back(str){
+          if (str.length>=3) 
+          {
+            str_len = 3;
+
+            bck = str.substring(str.length-3);
+            return bck + str + bck;
+          }
+          else
+            return false;
+      }
+
+      console.log(front_back("Impression"));
+      console.log(front_back("W3resources"));
+      console.log(front_back("ok"));
+
+      ////////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///check whether a string starts with'java' and false otherwise
+
+      function start_str(str)
+      {
+          if (str.length < 4) 
+          {
+            return false;
+          }
+
+          frnt = str.substring(0,4);
+
+          if (frnt == 'Java') 
+          {
+            return true;    
+          }
+
+          else
+          {
+            return false;
+          }
+      }
+
+      console.log(start_str("W3resources"));
+      console.log(start_str("Java"));
+      console.log(start_str("Javascript"));
+
+      ////////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///check whether two gn integer values are in the range 50..99(inclusive).return true if either of them are in the said range.
+
+      function chck_num(a,b)
+      {
+          if ((a >=50 && a <=99) || (b >= 50 && b <= 99)) 
+          {
+            return true;  
+          }
+          else
+          {
+            return false;
+          }
+      }
+
+      console.log(chck_num(10,87));
+      console.log(chck_num(10,33));
+      console.log(chck_num(52,120));
+      console.log(chck_num(55,87));
+
+      /////////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///check whether three gn integer values are in the range 50..99(inclusive).return true if one or more of them are in said range.
+
+      function chck_three_num(x,y,z)
+      {
+        return (x >= 50 && x<= 99) || (y >= 50 && y<= 99) || (z >= 50 && z<= 99);
+      }
+
+      console.log(chck_three_num(10,20,30));
+      console.log(chck_three_num(45,57,99));
+      console.log(chck_three_num(199,200,100));
+
+      ////////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///check whether a string "Script" presents at 5th(index4) position in a gn string,if "Script" presents in the string without "Script" otherwise return the original one.
+
+      function chck_script(str)
+      {
+          if (str.length < 6) 
+          {
+              return str;
+          }
+          
+          let result_str = str;
+
+          if (str.substring(10,4) == 'Script') 
+          {
+            return result_str = str.substring(0,4) + str.substring(10,str.length);
+          }
+
+          return result_str;
+      }
+
+      console.log(chck_script("InternalScript"));
+      console.log(chck_script("JavaScript"));
+
+      ////////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///largest of three given integers
+
+      function largest(x,y,z)
+      {
+          max_value = 0;
+          
+          if (x > y) 
+          {
+              max_value = x;
+          }
+          else
+          {
+              max_value = y;
+          }
+
+          if (z > max_value) 
+          {
+              max_value = z;
+          }
+
+          return max_value;
+      }
+
+      console.log(largest(10,65,44));
+      console.log(largest(120,344,555));
+      console.log(largest(10,20,30));
+
+      //////////////////////////////////////////
+
+      console.log("--------------------------------");
+
+      ///find a value which is nearest to 100 from two different given integer values.
+
+      function near_value(x,y)
+      {
+        if (x != y) 
+        {
+            x1 = Math.abs(x-100);
+            y1 = Math.abs(y-100);
+
+            if (x1<y1) 
+            {
+               return x; 
+            }
+
+            if (y1<x1) 
+            {
+                return y;
+            }
+
+            return 0;
+        }
+
+        else
+            return false;
+      }
+
+      console.log(near_value(14,36));
+      console.log(near_value(95,99));
+      console.log(near_value(50,50));
+
+
+    </script>
+</body>
+</html>

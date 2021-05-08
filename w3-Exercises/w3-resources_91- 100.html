@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        ///find the Kth greatest element of a gn array of integers.
+
+function greatest_kth(arr,k)
+{
+    for(var i = 0; i < k; i++)
+    {
+        var max_index = i,
+        tmp = arr[i];
+
+        for(var j = i + 1; j < arr.length; j++)
+        {
+            if (arr[j] > arr[max_index]) 
+            {
+                max_index = j;
+            }
+        }
+
+        arr[i] = arr[max_index];
+        arr[max_index] = tmp;
+    }
+
+    return arr[k - 1];
+}
+
+console.log(greatest_kth([1,2,3,4,5,6], 3));
+console.log(greatest_kth([-2,-4,-1,0,1], 1));
+
+////////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find the maxmimum possible sum of some of its k consecutive numbers of a specified array of positive integers.
+
+function array_consecutive_sum(nums,k)
+{
+    let result = 0;
+    let tmp_sum = 0;
+
+    for(var i = 0; i < k - 1;i++)
+    {
+        tmp_sum += nums[i];
+    }
+
+    for(var i = k - 1; i < nums.length; i++)
+    {
+        tmp_sum += nums[i];
+
+        if (tmp_sum > result) {
+            result = tmp_sum;
+        }
+
+        tmp_sum -= nums[i - k + 1];
+    }
+
+    return result;
+}
+
+console.log(array_consecutive_sum([1,2,3,4,5], 2));
+console.log(array_consecutive_sum([6,2,3,5,9], 3));
+console.log(array_consecutive_sum([10,15,7,1,0], 4));
+
+//////////////////////////////////////////////////
+
+
+console.log("--------------------------------");
+
+///find the max diff btw any two adjacent angles elements of a gn array of integers.
+
+function max_difference(arr)
+{
+    var max = -1;
+    var tmp;
+
+    for(var i = 0; i < arr.length - 1; i++)
+    {
+        tmp = Math.abs(arr[i] - arr[i + 1]);
+        max = Math.max(max,tmp);
+    }
+
+    return max;
+}
+
+console.log(max_difference([1,3,5,7,9]));
+console.log(max_difference([12,6,4,13,19]));
+console.log(max_difference([15,0,10,3,4]));
+
+//////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find the max diff among all possible pairs of gn array of integers.
+
+function max_diff_array(arr)
+{
+    var max_result = 0;
+
+    for(var i = 0;i < arr.length; i++)
+    {
+        for(var k = 0; k!=i && k < arr.length; k++)
+        {
+            var diff = Math.abs(arr[i] - arr[k]);
+            max_result = Math.max(max_result,diff);
+        }
+    }
+
+    return max_result;
+}
+
+console.log(max_diff_array([1,2,3,4,5]));
+console.log(max_diff_array([5,8,9,12,15]));
+console.log(max_diff_array([10,3,0,18,2]));
+
+//////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find the number which appears most in the gn array of integers.
+
+function array_most_nums(arr)
+{
+    var mst = [],
+    ans = 0;
+
+    for(var i = 0; i < 10; i++)
+    {
+        mst.push(0);
+    }
+
+    for(var i = 0; i < arr.length; i++)
+    {
+        mst[arr[i] - 1]++;
+
+        if (mst[arr[i] - 1] > mst[ans]) 
+        {
+            ans =  arr[i] - 1;
+        }
+    }
+
+    return ans + 1;
+}
+
+console.log(array_most_nums([1,2,5,2,7,9,0,2]));
+
+//////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///replace all nums with a specified nums of gn array of integers.
+num = [1,2,3,4,5,2,7,1];
+
+function array_replace(arr,old_value,new_value)
+{
+    for(var i = 0; i < arr.length; i++)
+    {
+        if (arr[i] === old_value) 
+        {
+            arr[i] = new_value;
+        }
+    }
+
+    return arr;
+}
+
+console.log(array_replace(num,2,5));
+
+//////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///compute the sum of absolute diff of consecutive numbers of a gn array of integers.
+
+function sum_difference(arr)
+{
+    var result = 0;
+    for(var i = 1; i < arr.length; i++)
+    {
+        result += Math.abs(arr[i] - arr[i - 1]);
+    }
+
+    return result;
+}
+
+console.log(sum_difference([1,4,5,9,-8]));
+
+///////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find the shortest possible string which can create a string to make it a palindrome by adding charcters to end of it.
+
+function palindrome(str)
+{
+    var chars;
+
+    for(var i = str.length;; i++)
+    {
+        chars = true;
+
+        for(var j = 0; j < i - j - 1; j++)
+        {
+            if (i - j - 1 < str.length && str[j] != str[i - j -1]) 
+            {
+                chars = false;
+                break;
+            }
+        }
+
+        if (chars) 
+        {
+            for( var j = str.length; j < i; j++)
+            {
+                str += str[i - j - 1];
+            }
+
+            return str;
+        }
+    }
+}
+
+console.log(palindrome("abcdea"));
+console.log(palindrome("511"));
+
+
+/////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///switch case of the minimum possible nums of letters to make a gn string written in the upper case or in the lower case.
+
+function change_case(str)
+{
+    var x = 0;
+    var y = 0;
+
+    for(var i = 0; i < str.length; i++)
+    {
+        if (/[A-Z]/.test(str[i])) 
+        {
+            x++;
+        }
+        else y++;
+    }
+
+    if (y > x) 
+      return str.toLowerCase();
+
+      return str.toUpperCase();
+}
+
+console.log(change_case("Vishnu"));
+console.log(change_case("ZOho"));
+    </script>
+    
+</body>
+</html>

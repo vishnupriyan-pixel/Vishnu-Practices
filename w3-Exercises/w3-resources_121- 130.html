@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        ///check whether a gn matrix is lower triangular or not.
+
+function lower_triangular(matrix)
+{
+    for(var i = 0; i < matrix.length; i++)
+    {
+        for(var j = 0; j < matrix[0].length; j++)
+        {
+            if (j > i && matrix[i][j] !==0) 
+            
+                return false;
+            
+        }
+    }
+
+    return true;
+}
+
+console.log(lower_triangular([[1,0,0], [0,2,0], [0,0,3]]));
+console.log(lower_triangular([[1,0,1], [2,0,0], [0,3,3]]));
+
+////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///check whether a gn array of integers represents either a strictly increasing or a strictly decreasing sequences.
+
+
+function monotonous(num)
+{
+    if (num.length === 1) 
+    {
+        return true;
+    }
+
+    var direction = num[1] -num[0];
+
+    for(var i = 0; i < num.length -1; i++)
+    {
+        if (direction * (num[i + 1] - num[i]) <= 0) 
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(monotonous([1,2,3]))
+console.log(monotonous([1,2,2]))
+console.log(monotonous([-1,0,1]))
+
+//////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find whether the numbers of gn array of integers is a permutation of numbers from 1 to a gn integer.
+
+function array_compare(arr,n)
+{
+    for(var i = 0; i < n; i++)
+    {
+        if (arr.indexOf(i + 1) < 0) 
+        return false;
+    }
+    return true;
+}
+
+console.log(array_compare([1,2,3,4,5], 4))
+console.log(array_compare([1,2,3,4,6], 5))
+
+////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///create a value of NOR of two gn booleans.
+
+function logical_Nor(a,b)
+{
+    return (!a && !b);
+}
+
+console.log(logical_Nor(true, false))
+console.log(logical_Nor(false, false))
+console.log(logical_Nor(true, true))
+
+//////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find the longest string from a  given array.
+
+function longest_sting(arr)
+{
+    var max =  arr[0].length;
+    var ans = arr[0];
+
+    for(var i = 1; i < arr.length; i++)
+    {
+        var imax = arr[i].length;
+
+        if (imax > max) 
+        {
+            ans = arr[i];
+            imax = max;
+        }
+    }
+
+    return ans;
+}
+
+console.log(longest_sting(["vishnu", "abc", "tiger"]))
+console.log(longest_sting(["zoho", "abc", "abcd"]))
+    </script>
+    
+</body>
+</html>

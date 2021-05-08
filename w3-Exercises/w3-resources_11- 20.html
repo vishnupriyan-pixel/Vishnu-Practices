@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 20px;
+    }
+    input{
+        padding: 5px;
+    }
+    #fnum{
+        margin-bottom: 10px;
+    }
+
+    #btn{
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    
+   
+</style>
+<body>
+
+    <form>
+        1st Num : <input type="text" id="fnum"> <br>
+        2nd Num : <input type="text" id="snum"> <br>
+
+        <input type="button" onclick="multiply()" value="Multiply" id="btn">  
+        
+
+        <input type="button" onclick="divide()" value="Divide" id="btn">
+    </form>
+
+    <p>The Result is : <br>
+
+        <span id="result"></span>
+
+    </p>
+
+    <script>
+        function multiply()
+        {
+            num1 = document.getElementById("fnum").value;
+            num2 = document.getElementById("snum").value;
+
+            document.getElementById('result').innerHTML = num1 * num2;
+
+            
+        }
+     
+        function divide()
+        {
+            num1 = document.getElementById("fnum").value;
+            num2 = document.getElementById("snum").value;
+
+            document.getElementById('result').innerHTML = num1 / num2;
+        }
+
+        
+    </script>
+
+    <script>
+
+    
+
+//////extension of file name
+
+fileExt = "zoho.jpg";
+console.log(fileExt.split('.').pop());
+
+fileExt = "vishnu.zip";
+console.log(fileExt.split('.').pop());
+
+/////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+/////diff b/w given num and 13,if the num is 13 return double the absolute diff.
+
+function diff(n)
+{
+    if (n<=13) 
+        
+      return 13-n;
+
+    else
+      return(n-13)*2;
+    
+}
+console.log(diff(40));
+console.log(diff(10));
+
+//////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+////compute the sum of two integers.if the two values are same,then returns triple their sum
+
+
+function sum(a,b)
+{
+    if (a == b) 
+    {
+
+      return 3 * (a+b);
+        
+    }
+    else
+    {
+      return(a+b);
+    }
+}
+
+console.log(sum(20,30));
+console.log(sum(20,20));
+
+///////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+////compute the abs diff b/w a specified num and 19.Returns triples their abs diff if specified num is greater than 19.
+
+function diff_num(a)
+{
+    if (a<=19) 
+    {
+        return (19-a);
+    }
+    else
+    {
+        return(a-19)*3;
+    }
+}
+ 
+console.log(diff_num(10));
+console.log(diff_num(19));
+console.log(diff_num(25));
+
+//////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///check two gn nums and return true if one of the num is 50 or if their sum is 50.
+
+function num_test(x,y)
+{
+    return((x == 50 || y == 50) || (x + y == 50));
+}
+
+console.log(num_test(50,0));
+console.log(num_test(0,50));
+console.log(num_test(15,30));
+console.log(num_test(40,10));
+
+////////////////////////////////////////////
+
+
+
+console.log("--------------------------------");
+
+ ////check whether a given integer is within 20 of 100 0r 400
+
+function num_hund(a)
+{
+    return ((Math.abs(100-a) <= 20) || (Math.abs(400-a) <= 20));
+}
+
+console.log(num_hund(15));
+console.log(num_hund(93));
+console.log(num_hund(99));
+console.log(num_hund(150));
+console.log(num_hund(200));
+console.log(num_hund(390));
+
+////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///check from two given integers,whether one is pos and one negt.
+
+function pos_neg(x,y)
+{
+    if ((x < 0 && y > 0) || x > 0 && y < 0) 
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+}
+
+console.log(pos_neg(1,1));
+console.log(pos_neg(-1,1));
+console.log(pos_neg(1,-1));
+console.log(pos_neg(-1,-1));
+
+///////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///to create a new string adding"wiki" in front of the gn string.If the gn string begins with "wiki"then return original string.
+
+function str_chck(str){
+
+if (str === null ||  str.substring(0,4) === 'Wiki') 
+  {
+    return str;
+  }
+
+  return "Wiki"+str;
+
+}
+
+console.log(str_chck("Wikipedia"));
+console.log(str_chck("pedia"));
+
+/////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///remove a charc at the spec position of a gn str and return the new str.
+
+function remove(str,pos)
+{
+    part1 = str.substring(0,pos);
+
+    part2 = str.substring(pos + 1);
+
+    return part1 + part2;
+}
+
+console.log(remove("Administration",0));
+console.log(remove("Administration",5));
+console.log(remove("Administration",8));
+
+    </script>
+</body>
+</html>

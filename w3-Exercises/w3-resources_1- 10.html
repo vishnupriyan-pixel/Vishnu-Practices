@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 20px;
+    }
+    input{
+        padding: 5px;
+    }
+    #fnum{
+        margin-bottom: 10px;
+    }
+
+    #btn{
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    
+   
+</style>
+<body>
+    
+
+    <script>
+       
+       var tdy = new Date();
+
+       var day = tdy.getDay();
+
+       var listday = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+       console.log("Today is : " + listday[day]);
+
+       var hr = tdy.getHours();
+       var min = tdy.getMinutes();
+       var sec = tdy.getSeconds();
+
+       console.log("Current Time :"+hr + ":"+min + ":" +sec);
+
+
+       ///////////////////////////////////////////////////////
+
+
+       window.print();
+
+       //////////////////////////////////////////////////////
+
+       console.log("--------------------------------");
+
+       var tdy = new Date();
+       var dd =  tdy.getDate();
+       var mm = tdy.getMonth();
+       var yr = tdy.getFullYear();
+
+       tdy = mm + '-' +dd+ '-' +yr;
+
+       console.log(tdy);
+
+       tdy = mm + '/' +dd+ '/' +yr;
+
+       console.log(tdy);
+
+       tdy = dd + '-' +mm+ '-' +yr;
+
+       console.log(tdy);
+
+
+       tdy = dd + '/' +mm+ '/' +yr;
+
+       console.log(tdy);
+
+       ////////////////////////////////////////////////////////
+
+       console.log("--------------------------------");
+
+       //////area of triangle
+
+       var s1 = 4;
+       var s2 = 5;
+       var s3 = 6;
+
+       var s = (s1+s2+s3)/2;
+       var area = Math.sqrt(s*((s-s1)*(s-s2)*(s-s3)));
+
+       console.log(area);
+
+       ///////////////////////////////////////////////////////
+
+       console.log("--------------------------------");
+
+       function leapyr(yr){
+
+        return(yr % 100 === 0)?(yr % 400 ===0): (yr % 4 === 0);
+       }
+
+       console.log(leapyr(2016));
+       console.log(leapyr(2021));
+
+       //////////////////////////////////////////////////////
+
+       console.log("--------------------------------");
+
+       //////first january being sunday from  2010 to 2020
+
+       for(var yr=2010; yr<=2020; yr++)
+       {
+           var d = new Date(yr,0,1);
+
+           if (d.getDay()===0) 
+           {
+
+            console.log("1st January is being a sunday"+yr);
+            }
+       }
+
+       //////////////////////////////////////////////////////
+
+       console.log("--------------------------------");
+
+       ////get a random num from 1 to 10
+
+       const num = Math.ceil(Math.random() * 10);
+       console.log(num);
+
+       const gnum = prompt('guess the number');
+
+       if (gnum == num) 
+           console.log('Matched');
+        
+        else
+            console.log('Not Matched ,the num was ' +gnum);
+
+
+      //////////////////////////////////////////////////////
+
+      
+        ///////temp to celsius and fahrenheit
+
+        function cTof(celsius)
+      {
+          var temp = celsius;
+          var cToFah = temp * 9/5 + 32;
+          var res = temp +'\xB0C is ' + cToFah +' \xB0F.';
+          console.log(res);
+      }
+
+
+      function fToC(fahrenheit)
+      {
+          var temp = fahrenheit;
+          var fToCel = (temp - 32)* 5/9; 
+          var res = temp +'\xB0F is '+ fToCel+'\xB0C.';
+          console.log(res);
+      }
+
+
+      cTof(85);
+      fToC(54);
+
+       ///////////////////////////////////////////////
+
+       console.log("--------------------------------");
+
+/////path url
+
+console.log(document.URL);
+
+//////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+/////variable using user defined
+
+var name = 'ball';
+
+var n =150;
+this[name] = n;
+console.log(this[name]);
+
+
+
+     
+
+           
+    
+
+
+
+
+
+
+
+
+       
+
+    </script>
+</body>
+</html>

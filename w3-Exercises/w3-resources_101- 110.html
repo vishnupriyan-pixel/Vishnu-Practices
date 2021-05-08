@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        ///Rearrange charcters of a gn string in such a way that it will become equal to another gn string.
+
+function rearrange_charcters(str1,str2)
+{
+    var first = str1.split('');
+    var second = str2.split('');
+    result = true;
+
+    first.sort();
+    second.sort();
+
+    for(var i = 0; i < Math.max(first.length, second.length); i++)
+    {
+        if (first[i] !== second[i]) 
+        {
+            result = false;
+        }
+    }
+
+    return result;
+}
+
+console.log(rearrange_charcters("abcd", "dcba"));
+console.log(rearrange_charcters("mnop", "pona"));
+
+//////////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///check whether there is atleast one element which occurs in two given sorted array of integers.
+
+function check_elements(arr1,arr2)
+{
+    for(var i = 0; i < arr1.length; i++)
+    {
+        if (arr2.indexOf(arr1[i]) != -1) 
+        
+        return true;
+    }
+
+    return false;
+}
+
+console.log(check_elements([5,6,7], [7,9,0]));
+console.log(check_elements([1,2,3], [7,8,0]));
+
+////////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find the number of inversions of a specified array of integers.
+
+function number_of_Inversion(arr)
+{
+    var ctr = 0;
+
+    for(var i = 0; i < arr.length; i++)
+    {
+        for(var j = i + 1; j < arr.length; j++)
+        {
+            if (arr[i] > arr[j])
+            ctr++; 
+                
+            
+        }
+    }
+
+    return ctr;
+}
+
+console.log(number_of_Inversion([1,2,5,7,9]));
+console.log(number_of_Inversion([10,20,70,-20]));
+
+/////////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find two elements of the array such that their absolute diff is not greater than a gn integer but is as close to the said integer.
+
+function diff_value(arr,n)
+{
+    var max_val = -1;
+    
+    for(var i = 0; i < arr.length; i++)
+    {
+        for(var j = i + 1; j < arr.length; j++)
+        {
+            var x = Math.abs(arr[i] - arr[j]);
+
+            if (x <= n) 
+            {
+                max_val = Math.max(max_val, x);
+            }
+        }
+    }
+
+    return max_val;
+}
+
+console.log(diff_value([12,10,38,35], 9));
+console.log(diff_value([12,10,34,44], 40));
+
+////////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find the num of times to replace a gn number with the sum of digits until it convert to single digit.
+
+function digit_to_one(num)
+{
+    var digitSum = function(num)
+    {
+        var digit_sum = 0;
+
+        while(num)
+        {
+            digit_sum += num % 10;
+            num = Math.floor(num / 10);
+        }
+
+        return digit_sum;
+    };
+
+    var result = 0;
+
+    while(num >= 10)
+    {
+        result += 1;
+        num = digitSum(num);    
+    }
+
+    return result;
+}
+
+console.log(digit_to_one(147));
+console.log(digit_to_one(222));
+
+///////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///find the num of sorted pairs formed by its elements of a gn array of integers such that one element in the pair is divisible by the other one.
+
+function pair_arr(arr)
+{
+    var result = 0;
+
+    for(var i = 0; i < arr.length; i++)
+    {
+        for(var j = i + 1; j < arr.length; j++)
+        {
+            if (arr[i] % arr[j] === 0 || arr[j] % arr[i] === 0) 
+            {
+                result++;
+            }
+        }
+    }
+
+    return result;
+}
+
+console.log(pair_arr([1,4,6]));
+console.log(pair_arr([9,18,0]));
+console.log(pair_arr([25,8,6]));
+
+/////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///create the dot products of two gn 3D vectors.
+
+function dot_product(vect1,vect2)
+{
+    var result = 0;
+    for(i = 0; i < 3; i++)
+    {
+        result += vect1[i] * vect2[i];
+    }
+
+    return result;
+}
+
+console.log(dot_product([1,4,5], [8,0,7]));
+console.log(dot_product([-9,0,4], [1,2,3]));
+console.log(dot_product([4,5,6], [1,2,3]));
+
+/////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///sort an array of all prime numbers btw 1 and a gn integers.
+
+function prime_number_sort(num)
+{
+    var prime_num1 = [];
+    var prime_num2 = [];
+
+    for(var i = 0; i <= num; i++)
+    {
+        prime_num2.push(true);
+    }
+    
+    for(var i = 2; i <= num; i++)
+    {
+        if (prime_num2[i]) 
+        {
+            prime_num1.push(i);
+
+            for(var j = 1; i * j <= num; j++)
+            {
+                prime_num2[i * j] = false;
+            }
+        }
+    }
+
+    return prime_num1;
+}
+
+console.log(prime_number_sort(7));
+console.log(prime_number_sort(19));
+console.log(prime_number_sort(31));
+
+/////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+function numbers_find(arr_num,num)
+{
+    var result = 0;
+
+    for(var i = 0; i < arr_num.length; i++)
+    {
+        if (arr_num[i] % 2 === 0 && arr_num[i] !== num) 
+        {
+            result++;
+        }
+
+        if (arr_num[i] === num) 
+        {
+            return result;
+        }
+    }
+
+    return -1;
+}
+
+console.log(numbers_find([1,2,3,4,5,6,7,8], 7));
+console.log(numbers_find([10,14,17,21,25], 17));
+
+////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///check a num from three gn numbers where two nums are equal.find the third one.
+
+function find_third_num(x,y,z)
+{
+    if ((x!==y) && (x!==z) && (y!==z)) 
+    
+        return "Three numbers are unequal.";
+
+        if(x==y) return z;
+        if(x==z) return y;
+        return x;
+    
+}
+
+console.log(find_third_num(1,2,2));
+console.log(find_third_num(1,1,2));
+console.log(find_third_num(1,2,3));
+
+    </script>
+</body>
+</html>

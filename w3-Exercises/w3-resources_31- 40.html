@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        ///check whether two numbers are in range 40...60 or in the range of 70...100.
+
+      function num_range(a,b)
+      {
+        if ((a >= 40 && a <= 60 && b >= 40 && b <=60)
+            ||
+            (a >= 70 && a <= 100 && b >= 70 && b <=100)) 
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+      }
+
+      console.log(num_range(41,59));
+      console.log(num_range(82,97));
+      console.log(num_range(58,70));
+
+    ////////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    function max_nums(x,y)
+    {
+        if ((x >= 40) && (x<=60) && (y >= 40 && y<=60))  
+        {
+            if (x===y) 
+            {
+                return  "Numbers are same";
+            }
+            else if (x>y)
+            {
+                return x;
+            }
+            else 
+            {
+                return y;
+            }
+        }
+
+        else
+        {
+            return "Numbers are not same";
+        }
+    }
+
+    console.log(max_nums(50,60));
+    console.log(max_nums(20,50));
+    console.log(max_nums(50,50));
+
+    /////////////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///check a given string contains 2 to 4 numbers of specified charcters
+
+    function chck_char(str,char)
+    {
+        ctr = 0;
+
+        for (let i = 0; i < str.length; i++)
+        {
+            if ((str.charAt(i) == char) && (i >= 1 && i<=3))
+            {
+                ctr=1;
+                break;
+            }
+        }
+
+        if (ctr==1)
+        return true;
+        return false;
+    }
+
+    console.log(chck_char('Vishnu','i'));
+    console.log(chck_char('zoho','h'));
+    console.log(chck_char('JavaScript','p'));
+    console.log(chck_char('W3resources','o'));
+    console.log(chck_char('impression','m'));
+
+    ////////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///check whether the last digit of three given positive integers is same.
+    
+    function last_digit(x,y,z)
+    {
+        if ((x>0) && y>0 && z>0) 
+        {
+            return (x % 10 == y % 10 && y % 10 == z % 10 && x % 10 == z % 10);
+        }
+
+        else 
+          return false;
+    }
+
+    console.log(last_digit(10,30,100));
+    console.log(last_digit(10,30,-100));
+    console.log(last_digit(-10,-30,-100));
+
+    ////////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///create new string with first 3 charcters in lowercase from a gn string.If the string length is less than 3 convert all the charcters in upper case.
+
+    function upper_lower(str)
+    {
+        if (str.length < 3) 
+        {
+            return str.toUpperCase();
+        }
+
+        frnt_part = (str.substring(0,3)).toLowerCase();
+
+        back_part = str.substring(3,str.length);
+
+        return frnt_part + back_part;
+    }
+
+    console.log(upper_lower("Vishnu"));
+    console.log(upper_lower("cy"));
+    console.log(upper_lower("JAVAScript"));
+
+    /////////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///check the total marks of a student in various exams.
+
+    function exam_marks(totmarks)
+    {
+        if (totmarks) 
+        {
+            return (totmarks >= 89 && totmarks <= 100);
+        }
+    }
+
+    console.log(exam_marks("76"));
+    console.log(exam_marks("98"));
+    console.log(exam_marks("88"));
+    
+    ///////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///compute the sum of the two gn integers,If the sum is in the range 50..80 return 65 otherwise return 80.
+
+    function sort_nums(x,y)
+    {
+        const sum_nums = x + y;
+
+        if (sum_nums >= 50 && sum_nums <= 80) 
+        {
+            return 65;
+        }
+
+        return 80;
+    }
+
+    console.log(sort_nums(20,40));
+    console.log(sort_nums(50,50));
+
+    /////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///check from two given integers whether one of them is 8 or their sum or diff is 8.
+
+    function check_sum8(x,y)
+    {
+        if (x == 8 || y == 8) 
+        {
+            return true;    
+        }
+
+        if (x + y == 8 || Math.abs(x-y) == 8) 
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    console.log(check_sum8(8,7));
+    console.log(check_sum8(24,32));
+    console.log(check_sum8(22,76));
+    console.log(check_sum8(18,5));
+
+    ///////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///check three given numbers,if the three numbers are same return 30 otherwise return 20 and if two numbers are same return 40.
+
+    function three_nums(a,b,c)
+    {
+        if (a == b && b == c) 
+        {
+            return 30;
+        }
+
+        if (a == b || b == c || a == c) 
+        {
+            return 40;
+        }
+
+        return 20;
+    }
+
+    console.log(three_nums(7,7,7));
+    console.log(three_nums(7,7,17));
+    console.log(three_nums(20,30,40));
+
+    //////////////////////////////////////
+    
+    console.log("--------------------------------");
+
+    ///check whether three gn nums are in increasing in strict mode or in soft mode.
+
+    function nums_order(x,y,z)
+    {
+        if (y > x && z > y) 
+        {
+            return "Strict mode";
+        }
+
+        else if (z>y) 
+            return "Soft mode";
+
+        else
+            return "Undefined";
+    }
+
+    console.log(nums_order(10,20,30));
+    console.log(nums_order(20,10,30));
+    console.log(nums_order(40,20,10));
+
+    </script>
+</body>
+</html>

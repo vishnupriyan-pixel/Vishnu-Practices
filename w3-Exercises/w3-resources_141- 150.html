@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        ///Break an address of an url and put it's part into an array.
+
+        function brk_address(add)
+        {
+            var data = add.split("://")
+            var proto = data[0];
+
+            data = data[1].split(".com");
+            var domain = data[0];
+            data = data[1].split("/");
+
+            if (data[1]) 
+            {   
+                return [proto,domain,data[1]] 
+            }
+
+            return [proto,domain]
+        }
+
+        var add = "https://www.w3resource.com/javascript-exercises/"
+
+        console.log("Original address: " + add)
+        console.log(brk_address(add))
+
+        ////////////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///find the maximum integer n.
+
+        function sum(val)
+        {
+            var sn = 0;
+            var i = 0;
+
+            while(sn <= val)
+            {
+                sn += i++;
+            }
+
+            return i - 2;   
+        }
+
+        console.log(sum(10))
+        console.log(sum(30))
+
+        ////////////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///compute the sum of cubes of all integer from 1 to an given integer.
+
+        function sum_cubes(n)
+        {
+            var sum = 0;
+
+            for(var i = 1; i <= n; i++)
+            {
+                sum += Math.pow(i,3);
+            }
+
+            return sum;
+        }
+
+        console.log(sum_cubes(5));
+        console.log(sum_cubes(9));
+
+        ////////////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///compute the sum of all digits that occur in a gn string.
+
+        function sum_digit(str)
+        {
+            var sum = 0;
+
+            for(var i = 0; i < str.length; i++)
+            {
+                if (/[0-9]/.test(str[i])) sum += parseInt(str[i]) 
+                
+            }
+
+            return  sum;
+        }
+
+        console.log(sum_digit("abcd90ff"));
+        console.log(sum_digit("w3resource"));
+
+        ////////////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        //swap two halves of a gn array of integers of even length.
+
+        function half_value(arr)
+        {
+            if (((arr.length)% 2) != 0) 
+            {
+                return false;
+            }
+
+            for(var i = 0; i < arr.length / 2; i++)
+            {
+                var tmp = arr[i];
+                arr[i] = arr[i + arr.length / 2];
+                arr[i + arr.length / 2] = tmp;  
+            }
+
+            return arr;
+        }
+
+        console.log(half_value([1,2,3,4,5,6]))
+        console.log(half_value([1,2,3,4,5,6,9]))
+
+
+        ////////////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///change the capitalization of all letters in a gn string.
+
+        function case_change(str)
+        {
+            var str1 = "";
+
+            for(var i = 0; i < str.length; i++)
+            {
+                if (/[A-Z]/.test(str[i]))
+                str1 += str[i].toLowerCase();
+
+                else str1 += str[i].toUpperCase();
+                    
+                
+            }
+            return str1;
+        }
+
+        console.log(case_change("javascript"))
+        console.log(case_change("Beautiful"))
+
+         ////////////////////////////////////////////////////
+
+         console.log("--------------------------------");
+
+        
+
+         
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

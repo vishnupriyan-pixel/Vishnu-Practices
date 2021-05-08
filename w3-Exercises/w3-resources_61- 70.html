@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+     ///concatenate two strings except their first character.
+
+     function concatenate(str1,str2)
+    {
+        str1 = str1.substring(1, str1.length);
+        str2 = str2.substring(1, str2.length);
+
+        return str1 + str2;
+
+    }
+
+     console.log(concatenate("PHP","JS"));
+     console.log(concatenate("Vishnu","Java"));
+     console.log(concatenate("PHP","JS"));  
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to move last three character to the start of a gn string.The string length must be 3.
+
+     function right_three(str)
+     {
+        if (str.length > 1) 
+        {
+            return str.slice(-3) + str.slice(0, -3);
+        }
+
+        return str;
+     }
+
+     console.log(right_three("JavaScript"));
+     console.log(right_three("Vishnu"));
+     console.log(right_three("Complete"));
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to create a string using the middle three characters of a gn string of odd length.The string length must be 3.
+
+     function middle_three(str)
+     {
+         if (str.length % 2!= 0)
+         {
+             mid = (str.length + 1) / 2;
+
+             return str.slice(mid - 2, mid + 1);
+         }
+
+         return str;
+     }
+
+     console.log(middle_three('Abcdefg'));
+     console.log(middle_three('Javascripts'));
+     console.log(middle_three('Exercises'));
+     console.log(middle_three('PHP'));
+
+     //////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to concatenate two strings and return the result.If the length of the strings are not same then remove the characters from the longer string.
+     
+     function str_concat(str1,str2)
+     {
+        const m = Math.min(str1.length,str2.length);
+
+        return str1.substring(str1.length - m) + str2.substring(str2.length - m);
+     }
+
+     console.log(str_concat("Python", "JS"));
+     console.log(str_concat("mr", "his"));
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to test whether a string end with "Script".The string length must be greater or equal to 6.
+
+     function end_test(str)
+     {
+         if (str.substring(str.length - 6, str.length) == 'Script') 
+         {
+             return true;
+         }
+         else
+         {
+             return false;
+         }
+     }
+
+     console.log(end_test("JavaScript"));
+     console.log(end_test("Java Script"));
+     console.log(end_test("JavaScripts"));
+
+     //////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to display city name if the string begins with "Los" or "New" otherwise return blank.
+
+     function city_name(str)
+     {
+         if (str.length >= 3 && ((str.substring(0,3) == 'Los')
+         || (str.substring(0,3) == 'New')))
+       
+         {
+             return str;
+         }
+
+         return '';
+     }
+
+     console.log(city_name("New York"));
+     console.log(city_name("Los Angeles"));
+     console.log(city_name("Paris"));
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to create new string from a given string,removing the first and last charcters of a string if the first and last charcters are P.
+
+     function remove_p(str)
+     {
+         let start_pos = 0;
+         let end_pos = str.length;
+
+         if (str.length > 0  && str.charAt(0) == 'P') 
+         {
+             start_pos = 1;
+         }
+
+         if (str.length > 1 && str.charAt(str.length - 1) == 'P') 
+         {
+             end_pos--;
+         }
+
+         return str.substring(start_pos,end_pos);
+     }
+
+     console.log(remove_p("PythonP"));
+     console.log(remove_p("Python"));
+     console.log(remove_p("JavaScript"));
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to create a new string using the first and last n characters frm gn string.The string length must be greater or equal to n.
+
+     function two_string(str, n)
+     {
+         front_part = str.substring(0, n);
+
+         last_part = str.substring(str.length - n);
+         
+         return front_part + last_part;
+     }
+
+     console.log(two_string("Javascript", 2));
+     console.log(two_string("Expression", 3));
+    
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///compute the sum of three elements of a gn integers of length 3.
+
+     function sum_three(nums)
+     {
+         return nums[0] + nums[1] + nums[2];
+     }
+
+     console.log(sum_three([10,13,8]));
+     console.log(sum_three([4,-6,-9]));
+     console.log(sum_three([50,25,25]));
+    </script>
+</body>
+</html>

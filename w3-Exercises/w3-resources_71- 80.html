@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        ///to rotate the elements left of a gn array of integers of length 3.
+
+     function rotate_elements(array)
+     {
+         return [array[1], array[2], array[0]];
+     }
+
+     console.log(rotate_elements([9,6,2]));
+     console.log(rotate_elements([1,2,3]));
+     console.log(rotate_elements([5,8,0]));
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///check whether 1 appears in first or last position of a gn array of integers.Thr array length must be greater or equal to 1.
+
+     function first_last1(nums)
+     {
+        var end_pos = nums.length - 1;
+        return nums [0] == 1 || nums[end_pos] == 1;
+     }
+
+     console.log(first_last1([1,4,8]));
+     console.log(first_last1([5,2,1]));
+     console.log(first_last1([15,34,9]));
+
+     /////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///check whether first and last elements are equal of a gn array of integers length 3.
+
+     function first_last_same(nums)
+     {
+         var end = nums.length - 1;
+         if (nums.length >= 1) 
+         {
+             return nums[0] == nums[end];
+         }
+         else
+            {
+                return false;
+            } 
+     }
+
+     console.log(first_last_same([11,22,11]));
+     console.log(first_last_same([20,40,60]));
+     console.log(first_last_same([100,100,100]));
+
+     //////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to reverse the elements of a gn array of integers length 3.
+
+     function reverse3(array)
+     {
+         return array.map((element, idx, arr) => arr[(arr.length - 1) - idx]);
+     }
+
+     console.log(reverse3([7,6,5]));
+     console.log(reverse3([19,40,50]));
+
+     //////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///find the larger value btn the first or last and set all other elements that value.Display new array.
+
+     function large_value(nums)
+     {
+         var max_val = nums[0] > nums[2] ? nums[0] : nums[2];
+         
+         nums[0] = max_val;
+         nums[1] = max_val;
+         nums[2] = max_val;
+
+         return nums;
+     }
+
+     console.log(large_value([15,10,30]));
+     console.log(large_value([0,-4,-9]));
+     console.log(large_value([30,6,20]));
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to create a new array taking the middle elements of the two arrays of integer and each length 3.
+
+     function middle_elements(a,b)
+     {
+        var new_array = []
+        new_array.push(a[1], b[1]);
+
+        return new_array;
+     }
+
+     console.log(middle_elements([3,7,9], [2,5,3]));
+     console.log(middle_elements([1,2,3], [8,10,0]));
+     console.log(middle_elements([10,7,20], [16,30,40]));
+
+     /////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to create a new array taking the frst and last elements from a gn array of integers and length must be greater or equal to 1.
+
+     function start(nums)
+     {
+         var array1 = [];
+
+         array1.push(nums[0] , nums[nums.length - 1]);
+
+         return array1;
+     }
+
+     console.log(start([40,50,10]));
+     console.log(start([2,0,19]));
+     console.log(start([14,29,1]));
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to test whether an array of integers of length 2 contains 1 or a 3.
+
+     function contains(nums)
+     {
+         if (nums.indexOf(1) != -1 || nums.indexOf(3) != -1) 
+         {
+             return true;
+         }
+
+         else
+         {
+             return false;
+         }
+     }
+
+     console.log(contains([7,4]));
+     console.log(contains([10,2]));
+     console.log(contains([1,8]));
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///test whether an array of integers of length 2 does not contain 1 or a 3.
+
+     function test_13(nums)
+     {
+         if (nums.indexOf(1) == -1 && nums.indexOf(3) == -1) 
+         {
+             return true;
+         }
+         else
+         {
+             return false;
+         }
+     }
+
+     console.log(test_13([6,9]));
+     console.log(test_13([1,0]));
+     console.log(test_13([10,3]));  
+
+     //////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///test whether a gn array of integers contains 30 or 40 twice.The array length should be 0,1, or 2.
+
+     function twice_3040(nums)
+     {
+         let a = nums[0];
+         let b = nums[1];
+
+         return (a === 30 && b === 30) || (a === 40 && b === 40); 
+
+     }
+
+     console.log(twice_3040([30,30]));
+     console.log(twice_3040([40,40]));
+     console.log(twice_3040([20,20]));
+     console.log(twice_3040([30]));
+    </script>
+    
+</body>
+</html>

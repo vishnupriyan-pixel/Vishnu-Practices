@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        ///check from three gn nums(non-negt nums) that two or all of them have the same rightmost digit.
+
+    function same_last_digit(a,b,c)
+    {
+        return (a % 10 === b % 10)||
+               (a % 10 === c % 10)||
+               (b % 10 === c % 10);
+    }
+
+    console.log(same_last_digit(11,21,31));
+    console.log(same_last_digit(11,21,32));
+    console.log(same_last_digit(11,22,35));
+
+    /////////////////////////////////////////
+      
+    console.log("--------------------------------");
+
+    ///check from three gn integers that whether a num is greater than or equal to 20 and less than one of others.
+    
+    function lessthan20(x,y,z)
+    {
+        return (x >= 20 && (x < y || x < z)) ||
+
+        (y >= 20 && (y < x || y < z)) ||
+
+        (z >= 20 && (z < y || z < x));
+
+    }
+
+    console.log(lessthan20(22,32,16));
+    console.log(lessthan20(22,22,16));
+    console.log(lessthan20(22,32,50));
+
+    /////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///check two gn integer values and return true if one of the num is 15 or if their sum or diff is 15.
+
+    function testnum15(a,b)
+    {
+        return (a === 15 || b === 15 || a + b === 15 || Math.abs(a-b) === 15);
+    }
+
+    console.log(testnum15(15,8));
+    console.log(testnum15(8,15));
+    console.log(testnum15(25,5));
+    console.log(testnum15(25,8));
+    console.log(testnum15(10,25));
+
+    ////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///check two gn non-negative integers that whether one of the num(not both) is multiple of 7 or 11.
+
+    function check_val(a,b)
+    {
+        if (!((a % 7 == 0 || a % 11 == 0) && (b % 7 == 0 || b % 11 == 0))) 
+        {
+          return ((a % 7 == 0 || a % 11 == 0) || (b % 7 == 0 || b % 11 == 0));
+         }
+
+     else
+
+       return false;
+    }
+    
+    console.log(check_val(14,7));
+    console.log(check_val(63,10));
+    console.log(check_val(22,17));
+
+    ////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///check whether a gn number is presents in the range 40....10000.
+
+    function range_chck(x,y,n)
+    {
+        if (n < 40 || n > 10000) 
+        
+            return false;
+
+        else
+
+        if(n >= x && n <= y)
+
+        return true;
+
+        else 
+
+        return false;
+        
+    }
+
+    console.log(range_chck(40,2000,60));
+    console.log(range_chck(90,500,70));
+    console.log(range_chck(100,2000,60));
+
+    ///////////////////////////////////////////
+
+    console.log("--------------------------------");
+
+    ///reverse a string
+
+     function reverse_string(str)
+     {
+         return str.split("").reverse().join("");
+     }
+
+     console.log(reverse_string("Vishnu"));
+     console.log(reverse_string("Zoho"));
+     console.log(reverse_string("Expense"));
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     function cap_letter(str)
+     {
+         str = str.split(" ");
+
+         for(var i = 0, x = str.length; i < x ; i++)
+         {
+            str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+         }
+
+         return str.join(" ");
+     }
+
+     console.log(cap_letter("is this way continues to tenkasi"));
+
+     /////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to convert a gn number to hours and minutes.
+
+     function convert_time(num)
+     {
+         var hrs = Math.floor(num / 60);
+         var mins = num % 60;
+
+         return hrs + ":" + mins;
+     }
+
+     console.log(convert_time(111));
+     console.log(convert_time(71));
+     console.log(convert_time(190));
+
+     //////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///convert the letters of a gn string in alphabetical order
+     
+     function alps_order(str)
+     {
+         return str.split("").sort().join("");
+     }
+
+     console.log(alps_order("Friends"));
+     console.log(alps_order("Grapes"));
+
+     //////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///check whether the characters a and b are separated by exactly 3 places anywhere at least once in gn string.
+     
+     function check_ab(str)
+     {
+         return (/a...b/).test(str) || (/b...a/).test(str);
+     }
+
+     console.log(check_ab("Chainsbreak"));
+     console.log(check_ab("pane borrow"));
+     console.log(check_ab("abs tyre"));
+    </script>
+</body>
+</html>

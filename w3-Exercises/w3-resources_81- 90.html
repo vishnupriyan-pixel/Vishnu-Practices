@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        ///to swap the first and last elements of a gn array of integers.The array length should be atleast 1.
+
+     function swapping(array)
+     {
+        [array[0], array[array.length - 1]] = [array[array.length - 1], array[0]];
+
+        return array;
+     }
+
+     console.log(swapping([1,2,3,4]));
+     console.log(swapping([7,5,6]));
+     console.log(swapping([4]));
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to add two digits of a gn positive integerof length two.
+
+     function add_twodigit(n)
+     {
+         return n % 10 + Math.floor(n / 10);
+     }
+
+     console.log(add_twodigit(19));
+     console.log(add_twodigit(97));
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to add two positive integers without carry.
+
+     function add_without_carry(n1,n2)
+     {
+         var result = 0,
+
+         x = 1;
+         while(n1 > 0 && n2 > 0)
+         {
+             result += x * ((n1 + n2) % 10);
+             
+             n1 = Math.floor(n1 / 10);
+             n2 = Math.floor(n2 / 10);
+
+             x*= 10;
+         }
+         return result;
+     }
+
+     console.log(add_without_carry(315,987));
+     console.log(add_without_carry(600,900));
+
+     //////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to find the longest string from a gn array of strings.
+
+     function longest_string(str)
+     {
+         var max = str[0].length;
+         str.map(a => max = Math.max(max, a.length));
+         result = str.filter(a => a.length == max);
+
+         return result;
+     }
+
+     console.log(longest_string(['Nice','Beautiful','Apple']));
+
+     //////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to replace each charcters of a gn string by the next one in the English Alphabets.
+
+     function alphabet_shift(str)
+     {
+         var chars = str.split("");
+
+         for(var i = 0; i < chars.length;i++)
+         {
+             var n = chars[i].charCodeAt() - 'a'.charCodeAt();
+            n = (n + 1) % 26;
+            chars[i] = String.fromCharCode(n + 'a'.charCodeAt());
+         }
+
+         return chars.join("");
+     }
+
+     console.log(alphabet_shift("abcdexyz"));
+
+     //////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to divide a gn array of positive integers into two parts.First element goes to first part,second element goes to second part,and third element goes to first part and so on.
+     //Now compute the sum of two parts and store into an array of size two.
+
+     function alternate_nums(arr_num)
+     {
+         var result = [0,0];
+         
+         for(var i = 0;i < arr_num.length;i++)
+         {
+             if (i % 2) result[1] += arr_num[i]; 
+             
+             else
+             result[0] += arr_num[i];
+         }
+
+         return result; 
+
+     }
+
+     console.log(alternate_nums([1,2,3,8,9,10]));
+
+     /////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     //find the types of a specified array.
+
+     function angle_type(angle)
+     {
+         if (angle < 90) 
+         {
+             return "Acute angle.";
+         }
+
+         if (angle === 90)
+         {
+             return "Right angle.";
+         }
+
+         if (angle < 180) 
+         {
+             return "Obtuse angle.";
+         }
+
+         return "Straight angle."
+     }
+
+     console.log(angle_type(58));
+     console.log(angle_type(90));
+     console.log(angle_type(160));
+     console.log(angle_type(190));
+
+     //////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to check whether two arrays of integers of same length are similar or not.The arrays will similar 
+     ///if one array can be obtained from another array by swapping at most one pair of elements.
+     
+     function array_checking(arra1, arra2) {
+
+     for(var i = 0; i < arra1.length; i++) 
+     {
+     for(var j = i; j < arra1.length; j++) 
+     {
+      var result = true,
+       temp = arra1[i];
+       arra1[i] = arra1[j];
+      arra1[j] = temp;
+    for(var k = 0; k < arra1.length; k++) 
+    {
+      if(arra1[k] !== arra2[k]) 
+      {
+        result = false;
+        break;
+      }
+    }
+
+    if(result) 
+    {
+      return true;
+    }
+    arra1[j] = arra1[i];
+    arra1[i] = temp;
+  }
+}
+return false;
+}
+
+console.log(array_checking([10,20,30], [10,20,30]))
+console.log(array_checking([10,20,30], [30,10,20]))
+console.log(array_checking([10,20,30,40], [10,30,20,40]))
+
+//////////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///check whether two given integers are same or not.
+
+function check_numbers(x,y,divisor)
+{
+    if (x % divisor === 0 && y % divisor === 0 || x % divisor !== 0 && y % divisor !== 0) 
+    {
+        return true;
+    }
+
+    return false;
+}
+
+console.log(check_numbers(21,63,7));
+console.log(check_numbers(40,100,5));
+console.log(check_numbers(11,50,2));
+
+////////////////////////////////////////////////////
+
+console.log("--------------------------------");
+
+///check whether it is possible to replace $ in a specified expression.
+
+function check_expression(x,y,z)
+{
+    return x + y == z || x - y == z || x * y == z || x / y == z;
+}
+
+console.log(check_expression(10,15,25));
+console.log(check_expression(10,15,150));
+console.log(check_expression(40,10,30));
+console.log(check_expression(100,5,20));
+console.log(check_expression(17,3,50));
+
+    </script>
+    
+</body>
+</html>

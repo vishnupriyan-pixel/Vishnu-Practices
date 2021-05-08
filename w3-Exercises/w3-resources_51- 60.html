@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        ///to count the number of vowels in a gn string.
+
+     function vowel_tot(str)
+     {
+         return str.replace(/[^aeiou]/g, "").length;
+     }
+
+     console.log(vowel_tot("apple"));
+     console.log(vowel_tot("umbrellla"));
+     
+     /////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///check whether a gn string contains equal num of p's and t's.
+
+     function equal_pt(str)
+     {
+         var str_p = str.replace(/[^p]/g, "");
+
+         var str_t = str.replace(/[^t]/g, "");
+
+         var p_num = str_p.length;
+         var t_num = str_t.length;
+
+         return p_num === t_num;
+     }
+
+     console.log(equal_pt("paptts"));
+     console.log(equal_pt("paatps"));
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to divide two positive nums and return a string with properly formatted commas.
+
+    
+         n1 = 100;
+         n2 = 7;
+
+         var div = Math.round(n1/n2).toString(),
+
+         array_result = div.split("");  
+
+         if (div >= 1000) 
+         {
+             for(var i = div.length - 3; i > 0;i -= 3)
+             {
+                 array_result.splice(i,0,",");
+             }
+             array_result;
+         }
+        
+     
+     console.log(array_result);
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///create a new string of specified copies of a gn string.
+
+     function string_copies(str,n)
+     {
+         if (n<0) 
+            return false;
+        else
+        return str.repeat(n);
+         
+     }
+     console.log(string_copies("ok",4));
+     console.log(string_copies("ok",0));
+     console.log(string_copies("ok",-1));
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///create a new string of 4 copies of the last 3 characters of a gn original string.The length of the gn string must be 3 and above.
+     
+     function newstring(str)
+     {
+        if(str.length >= 3)
+        {
+            result_str = str.substring(str.length - 3);
+            return result_str + result_str + result_str + result_str;
+        }
+        else
+        return false;
+     }
+
+
+     console.log(newstring("Javascript 2.0"));
+     console.log(newstring("Ab"));
+     console.log(newstring("Javascript"));
+
+     /////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///create extract the first half of a string of even length.
+
+     function frst_half(str)
+     {
+         if (str.length % 2 == 0) 
+         {
+            return str.slice(0,str.length / 2);
+         }
+
+         return str;
+     }
+
+     console.log(frst_half("Python"));
+     console.log(frst_half("Java"));
+     console.log(frst_half("Python"));
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///create a new string without the first and last charcters of a gn string.
+     
+     function without_frst_end(str)
+     {
+        return str.substring(1,str.length - 1);
+     }
+
+     console.log(without_frst_end('Javascript'));
+     console.log(without_frst_end('JS'));
+     console.log(without_frst_end('PHP'));
+
+     ///////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///concatenate two strings except their first character.
+
+     function concatenate(str1,str2)
+    {
+        str1 = str1.substring(1, str1.length);
+        str2 = str2.substring(1, str2.length);
+
+        return str1 + str2;
+
+    }
+
+     console.log(concatenate("PHP","JS"));
+     console.log(concatenate("Vishnu","Java"));
+     console.log(concatenate("PHP","JS"));  
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to move last three character to the start of a gn string.The string length must be 3.
+
+     function right_three(str)
+     {
+        if (str.length > 1) 
+        {
+            return str.slice(-3) + str.slice(0, -3);
+        }
+
+        return str;
+     }
+
+     console.log(right_three("JavaScript"));
+     console.log(right_three("Vishnu"));
+     console.log(right_three("Complete"));
+
+     ////////////////////////////////////////////
+
+     console.log("--------------------------------");
+
+     ///to create a string using the middle three characters of a gn string of odd length.The string length must be 3.
+
+     function middle_three(str)
+     {
+         if (str.length % 2!= 0)
+         {
+             mid = (str.length + 1) / 2;
+
+             return str.slice(mid - 2, mid + 1);
+         }
+
+         return str;
+     }
+
+     console.log(middle_three('Abcdefg'));
+     console.log(middle_three('Javascripts'));
+     console.log(middle_three('Exercises'));
+     console.log(middle_three('PHP'));
+
+    </script>
+    
+</body>
+</html>
