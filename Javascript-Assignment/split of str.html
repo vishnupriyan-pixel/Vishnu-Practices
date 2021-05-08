@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>split of a string</title>
+</head>
+<body>
+
+	<script>
+
+		var x = "method is used to split a string into an array of substrings and returns the new array.";
+		
+		var y = x.split(" ");
+		
+		var z = y.length;
+
+		var str;
+
+		var m = "";
+
+		for (var i = 0; i < z; i++) 
+		{
+		
+			str = y[i][0].toUpperCase() + y[i].substring(1);
+
+			m = m +str +" ";
+		}
+
+
+		console.log(m);
+
+
+	</script>
+
+</body>
+</html>

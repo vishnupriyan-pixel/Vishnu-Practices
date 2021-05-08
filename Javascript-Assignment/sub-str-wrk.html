@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Substring-wrk</title>
+</head>
+<body>
+
+	<script>
+		
+		var name = "vishnuharisabaree";
+		var i;
+		var j;
+		var x = name.length;
+		var name1 = name[0].toUpperCase();
+		var name2 = name.substring(1,name.length);
+		var name3 = name1+name2;
+
+		for ( var i =1; i<=x; i++) 
+		{
+
+			if (x == i) 
+			{
+				console.log(name.substring(0,i).toUpperCase());
+			}
+			else
+			{
+				console.log(name3.substring(0,i));
+			}
+
+		}
+
+		  for ( var j =x; j>=0; j--) 
+		    {
+
+		    	console.log(name3.substring(j,0));
+		
+		   }
+
+		
+	</script>
+
+</body>
+</html>

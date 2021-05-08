@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication-table</title>
+	<link rel="stylesheet" type="text/css" href="css/multi-table.css">
+</head>
+<body>
+
+	<div class="head">My Multiplication Table</div>
+
+	<div id ="table">
+
+
+		<div class ="tab-odd" id="1"></div>
+		<div class="tab-even" id="2"></div>
+		<div class="tab-odd" id="3"></div>
+		<div class="tab-even" id="4"></div>
+		<div class="tab-odd" id="5"></div>
+		<div class="tab-even" id="6"></div>
+		<div class="tab-odd" id="7"></div>
+		<div class="tab-even" id="8"></div>
+		<div class="tab-odd" id="9"></div>
+		<div class="tab-even" id="10"></div>
+		
+	</div>
+
+	<script>
+		
+		var multiply = "";
+		for (var i=1; i<11; i++) 
+		{
+			for (var j = 1;j<11; j++) 
+		  {
+		  multiply += j + " " + "*" + i + " = " + i*j + "<br>";			
+		  }
+		  if (j=10) 
+		  	{
+
+		  		document.getElementById(i).innerHTML = multiply;
+		  	    multiply = "";
+		  	}
+		}
+		
+	</script>
+
+</body>
+</html>

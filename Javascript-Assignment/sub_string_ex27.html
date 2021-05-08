@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>substring starts with java</title>
+</head>
+<body>
+
+ <p id="value"></p>
+
+ <p id="value1"></p>
+
+ <script>
+ 	
+ 	function my_str(data) {
+ 		
+ 		start = data.substring(0,4);
+
+ 		if (start == 'Java') 
+ 		{
+   			 
+   			return true;
+ 		}
+ 		else
+ 		{
+ 			return false;
+ 		}
+
+
+ 	}
+
+
+ 	document.querySelector("#value").innerHTML = my_str("VishnuHari");
+
+ 	document.querySelector("#value1").innerHTML = my_str("Javascript");
+
+
+ </script>
+</body>
+</html>

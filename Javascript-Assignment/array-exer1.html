@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Exercise</title>
+</head>
+<body>
+
+	<script>
+		
+		var a=[
+		["Apple","Orange","Grapes"],
+		[3,5,2],
+		[100,130,90]
+		];
+
+		var total = 0;
+
+		
+		for (var i = 0; i<a.length; i++) {
+
+		console.log(i+1+"  "+a[0][i]+"    "+a[1][i]+"   "+a[2][i]+ "  =  "+a[1][i]*a[2][i]);
+			
+		total = total + a[1][i]*a[2][i];
+
+		}
+		console.log("----------------------------------------");
+		console.log("              Total" + "  =  "+total);
+		console.log("----------------------------------------");
+
+		// console.log(a[0][0]+"     "+a[1][0]+"    "+a[2][0]+ "  =  "+a[1][0]*a[2][0]);
+		
+	</script>
+
+</body>
+</html>
