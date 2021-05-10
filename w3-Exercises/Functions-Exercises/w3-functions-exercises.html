@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        ///reverse a number
+
+        function reverse_num(n)
+        {
+            n = n + "";
+            return n.split("").reverse().join("");
+        }
+
+        console.log(reverse_num(12345));
+        console.log(reverse_num(75890));
+
+        ////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///returns a passed string with letters in alphabetical order.
+
+        function alphabet_order(str)
+        {
+            return str.split('').sort().join('');
+        }
+
+        console.log(alphabet_order("javascript"));
+        console.log(alphabet_order("resources"));
+
+        ////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///converts the first letter of each word of a string in upper case.
+
+        function uppercase(str)
+        {
+            var arr = str.split(" ");
+            var newarr = [];
+
+            for(var i = 0; i < arr.length; i++)
+            {
+                newarr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
+            }
+
+            return newarr.join(" ")
+        }
+
+        console.log(uppercase("worked on function exercises"))
+
+        ////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///find the longest word in a string.
+
+        function longest_word(str)
+        {
+             var arr = str.match(/\w[a-z]{0,}/gi);
+
+             var result = arr[0];
+
+             for(var i = 1; i < arr.length; i++)
+             {
+                 if (result.length < arr[i].length) 
+                 {
+                     result = arr[i];
+                 }
+             }
+
+             return result;
+        }
+
+        console.log(longest_word("javascript tutorial exercises"))
+
+
+        ////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///counts the number of vowels within a string.
+
+        function vowels(str)
+        {
+            var vowel_all = "aeiouAEIOU";   
+
+            var count = 0;
+            for(var i = 0; i < str.length; i++)
+            {
+                if (vowel_all.indexOf(str[i]) !== -1) 
+                {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+
+        console.log(vowels("javascript tutorial exercises"))
+
+        ////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///returns the n rows by n columns identity matrix.
+
+        function i_matrix(n)
+        {
+          
+             for(var i = 0; i < n; i++)
+             {
+                for(var j = 0; j < n; j++)
+                {
+                    if (i === j) 
+                    {
+                        console.log("1");
+                    }
+                    else
+                    {
+                        console.log("0");
+                    }
+
+                    console.log("----------------");
+                }
+             }
+        }
+        i_matrix(3);
+
+        ////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///compute the value of bn where n is the exponent and b is the bases.
+
+        function exponent(b,n)
+        {
+            var result = 1;
+
+            for(var i = 1; i <= n; i++)
+            {
+                result = b * result;
+            }
+            return result;
+        }
+
+        console.log(exponent(5,7))
+
+        ////////////////////////////////////////////
+
+        console.log("--------------------------------");
+
+        ///letter count within a string.
+
+        function letter_count(str, letter)
+        {
+            var count = 0;
+
+            for(var i = 0; i < str.length; i++)
+            {
+                if (str.charAt(i) == letter) 
+                {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+
+        console.log(letter_count("javascript", "a"))
+
+         ////////////////////////////////////////////
+
+         console.log("--------------------------------");
+
+         ///bigger elements in an array.
+
+         function bigger(value)
+         {
+             return function(evalue)
+             {
+                 return (evalue >= value);
+             }
+         }
+
+         var result = [15,6,56,98,176].filter(bigger(10));
+
+         console.log(result)
+
+
+        
+
+
+
+
+      
+        
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
