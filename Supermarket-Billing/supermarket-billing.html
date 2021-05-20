@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMarket-Billing</title>
+    <link rel="stylesheet" href="CSS/supermarket-billing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> 
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="head">
+
+            <div class="head-content">
+
+                <h3 id="shp-name">SuperMarket Billing</h3>
+            </div>
+        </div>
+
+        <div class="main">
+
+            <div class="items">
+
+                <form class="details">
+                    <div class="custom-detail1">
+                        <span style="color: white;">Customer ID </span>
+                        <input type="number" id="det1" autocomplete="off" required>
+                    </div>
+
+                    <div class="custom-detail2">
+                        <span style="color: white;">Customer Name </span>
+                        <input type="text" id="det5" autocomplete="off" pattern="[A-Za-z]" required>
+                    </div>
+
+                    <div class="custom-detail2">
+                        <span style="color: white;">Product Code </span>
+                        <input type="number" id="det" style="margin-left: 60px;"autocomplete="off" required>
+                    </div>
+
+                    <div class="custom-detail2">
+                        <span style="color: white;">Product Name </span>
+                        <input type="text" id="det6" style="margin-left: 54px;" placeholder="Product Name"pattern="[A-Za-z]" required>
+                    </div>
+
+                   
+
+                    <div class="custom-detail2">
+                        <span style="color: white;">Price Per Unit  </span>
+                        <input type="number" id="det2" style="margin-left: 60px;" oninput="multiply1()" required>
+                    </div>
+
+                    <div class="custom-detail2">
+                        <span style="color: white;">Quantity </span>    
+                        <input type="number" id="det3" style="margin-left: 97px;"oninput="multiply1()" required>
+                    </div>
+
+                    <div class="custom-detail2">
+                        <span style="color: white;">Amount  </span>
+                        <input type="text" id="det4" style="margin-left: 100px;" required>
+                    </div>
+
+                    <input type="button" id="add-btn" onclick="add_product()" value="ADD">
+
+                  </form>
+                    <br>
+
+                    <div class="total-list">
+
+                    </div>
+
+                
+            </div>
+
+            <div class="items-order">
+                
+                <!-- <img src="images/grad-back.jpg" alt="" style="height: 597px;width: 100%;object-fit: cover;z-index: -1;"> -->
+              
+                <table class="top-head">
+                    <tr id="t-con">
+                        <th id="t-head">Product Name</th>
+                        <th id="t-head">Quantity</th>
+                        <th id="t-head">Price Per Unit</th>
+
+                        <th id="t-head">Amount</th>
+                    </tr>
+                  
+                </table>
+
+                <p id="total">
+                    Total :
+                </p>
+                
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>
+
+      function multiply1()
+      {
+        var  num1 = document.getElementById("det2").value;
+        var  num2 = document.getElementById("det3").value;
+
+        var tot = num1 * num2;
+
+          document.getElementById("det4").value = tot;
+         
+      }
+
+      function add_product(){
+      
+  
+
+    // Append product to the table
+    $(".top-head tbody").append("<tr>" +
+        "<td>" + $("#det6").val() + "</td>" +
+        "<td>" + $("#det3").val() + "</td>" +
+        "<td>" + $("#det2").val() + "</td>" +
+        "<td>" + $("#det4").val() + "</td>" +
+        "</tr>");
+}
+
+
+
+
+function total()
+{
+   var tot = 0;
+   for(var i = 0;i < row.length;i++){
+    var amnt = 0;
+    row[i].getElementById("det4").value = amnt;
+    tot += amnt;
+   }
+
+   document.getElementById("total").value = tot;
+  
+}
+
+
+
+
+      
+      
+
+    </script>
+    
+
+
+    
+</body>
+</html>
