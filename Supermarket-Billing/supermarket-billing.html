@@ -81,23 +81,77 @@
                 
                 <!-- <img src="images/grad-back.jpg" alt="" style="height: 597px;width: 100%;object-fit: cover;z-index: -1;"> -->
               
-                <table class="top-head">
-                    <tr id="t-con">
-                        <th id="t-head">Product Name</th>
-                        <th id="t-head">Quantity</th>
-                        <th id="t-head">Price Per Unit</th>
+                <div class="top-head">
+                    
+                        <div id="t-head1">
 
-                        <th id="t-head">Amount</th>
-                    </tr>
+                            <div id="detail1">
+
+                                <h2>Product Name</h2>
+
+                            </div>
+
+                            <div id="detail2">
+
+                               
+
+                            </div>
+
+                        </div>
+
+                        <div id="t-head1">
+
+                            <div id="detail1">
+
+                                <h2>Qty</h2>
+
+                            </div>
+
+                            <div id="detail3">
+
+                        </div>
+
+                        </div>
+
+                        <div id="t-head1">
+
+                            <div id="detail1">
+
+                                <h2>Price Per Unit</h2>
+
+                            </div>
+
+                            <div id="detail4">
+
+                        </div>
+
+                        </div>
+
+                        <div id="t-head1">
+
+                            <div id="detail1">
+
+                                <h2>Amount</h2>
+
+                            </div>
+
+                            <div id="detail5">
+
+                        </div>
+                    
                   
-                </table>
+                </div>
 
-                <p id="total">
-                    Total :
-                </p>
-                
+               
 
             </div>
+
+            <div id="total">Total:
+
+                <p id="tot-amnt"></p>
+            </div>
+
+          
 
         </div>
 
@@ -117,34 +171,104 @@
          
       }
 
-      function add_product(){
+      function add_product()
+      {
+
+        var productName = document.getElementById("det6").value;
+        var qty = document.getElementById("det3").value;
+        var priceUnit = document.getElementById("det2").value;
+        var amnt = document.getElementById("det4").value;
+
+        //prdct-name
       
-  
+       var create = document.createElement("DIV");
 
-    // Append product to the table
-    $(".top-head tbody").append("<tr>" +
-        "<td>" + $("#det6").val() + "</td>" +
-        "<td>" + $("#det3").val() + "</td>" +
-        "<td>" + $("#det2").val() + "</td>" +
-        "<td>" + $("#det4").val() + "</td>" +
-        "</tr>");
+       var txt = document.createTextNode(productName);
+       
+       create.appendChild(txt);
+       document.getElementById("detail2").appendChild(create);
+
+       //Qty
+      
+       var create = document.createElement("DIV");
+
+       var txt = document.createTextNode(qty);
+       
+       create.appendChild(txt);
+       document.getElementById("detail3").appendChild(create);
+
+       //price-unit
+      
+       var create = document.createElement("DIV");
+
+       var txt = document.createTextNode(priceUnit);
+       
+       create.appendChild(txt);
+       document.getElementById("detail4").appendChild(create);
+
+       //amnt
+
+       var create = document.createElement("DIV");
+
+       var txt = document.createTextNode(amnt);
+       
+       create.appendChild(txt);
+       document.getElementById("detail5").appendChild(create);
+
+
+       ///reset the items.
+
+       document.getElementById("det6").value = "";
+       document.getElementById("det").value = "";
+       document.getElementById("det3").value = "";
+       document.getElementById("det2").value = "";
+       document.getElementById("det4").value = "";
+
+       
+       /////validation process
+
+       var dtl1 = document.getElementById("det1").value;
+       var dtl2 = document.getElementById("det5").value;
+       var dtl3 = document.getElementById("det").value;
+       var dtl4 = document.getElementById("det6").value;
+       var dtl5 = document.getElementById("det2").value;
+       var dtl6 = document.getElementById("det3").value;
+       
+      
+
+
+    //    if (dtl1 == "") {
+    //        alert("Please complete the data");
+    //    }
+    //    else if (dtl2 == "") {
+    //        alert("Please complete the data");
+    //    }
+    //    else if (dtl3 == "") {
+    //        alert("Please complete the data");
+    //    }
+    //    else if (dtl4 == "") {
+    //        alert("Please complete the data");
+    //    }
+    //    else if (dtl5 == "") {
+    //        alert("Please complete the data");
+    //    }
+    //    else if (dtl6 == "") {
+    //        alert("Please complete the data");
+    //    }
+  
+    
+
+
+    //total amount
+
+   
 }
 
 
 
 
-function total()
-{
-   var tot = 0;
-   for(var i = 0;i < row.length;i++){
-    var amnt = 0;
-    row[i].getElementById("det4").value = amnt;
-    tot += amnt;
-   }
 
-   document.getElementById("total").value = tot;
-  
-}
+
 
 
 
