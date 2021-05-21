@@ -174,6 +174,43 @@
       function add_product()
       {
 
+         /////validation process
+
+       var dtl1 = document.getElementById("det1").value;
+       var dtl2 = document.getElementById("det5").value;
+       var dtl3 = document.getElementById("det").value;
+       var dtl4 = document.getElementById("det6").value;
+       var dtl5 = document.getElementById("det2").value;
+       var dtl6 = document.getElementById("det3").value;
+       
+      
+
+
+       if (dtl1 == "") {
+           alert("Please complete Customer ID");
+           return false;
+       }
+       else if (dtl2 == "") {
+           alert("Please complete ");
+           return false;
+       }
+       else if (dtl3 == "") {
+           alert("Please complete the data");
+           return false;
+       }
+       else if (dtl4 == "") {
+           alert("Please complete the data");
+           return false;
+       }
+       else if (dtl5 == "") {
+           alert("Please complete the data");
+           return false;
+       }
+       else if (dtl6 == "") {
+           alert("Please complete the data");
+           return false;
+       }
+
         var productName = document.getElementById("det6").value;
         var qty = document.getElementById("det3").value;
         var priceUnit = document.getElementById("det2").value;
@@ -225,36 +262,7 @@
        document.getElementById("det4").value = "";
 
        
-       /////validation process
-
-       var dtl1 = document.getElementById("det1").value;
-       var dtl2 = document.getElementById("det5").value;
-       var dtl3 = document.getElementById("det").value;
-       var dtl4 = document.getElementById("det6").value;
-       var dtl5 = document.getElementById("det2").value;
-       var dtl6 = document.getElementById("det3").value;
-       
       
-
-
-    //    if (dtl1 == "") {
-    //        alert("Please complete the data");
-    //    }
-    //    else if (dtl2 == "") {
-    //        alert("Please complete the data");
-    //    }
-    //    else if (dtl3 == "") {
-    //        alert("Please complete the data");
-    //    }
-    //    else if (dtl4 == "") {
-    //        alert("Please complete the data");
-    //    }
-    //    else if (dtl5 == "") {
-    //        alert("Please complete the data");
-    //    }
-    //    else if (dtl6 == "") {
-    //        alert("Please complete the data");
-    //    }
   
     
 
