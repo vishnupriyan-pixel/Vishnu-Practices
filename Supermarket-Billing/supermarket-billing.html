@@ -30,17 +30,17 @@
                 <form class="details">
                     <div class="custom-detail1">
                         <span style="color: white;">Customer ID </span>
-                        <input type="number" id="det1" autocomplete="off" required>
+                        <input type="number" id="det1" required>
                     </div>
 
                     <div class="custom-detail2">
                         <span style="color: white;">Customer Name </span>
-                        <input type="text" id="det5" autocomplete="off" pattern="[A-Za-z]" required>
+                        <input type="text" id="det5"  pattern="[A-Za-z]" required >
                     </div>
 
                     <div class="custom-detail2">
                         <span style="color: white;">Product Code </span>
-                        <input type="number" id="det" style="margin-left: 60px;"autocomplete="off" required>
+                        <input type="number" id="det" style="margin-left: 60px;" required autocomplete="off">
                     </div>
 
                     <div class="custom-detail2">
@@ -99,6 +99,7 @@
 
                         </div>
 
+
                         <div id="t-head1">
 
                             <div id="detail1">
@@ -112,6 +113,7 @@
                         </div>
 
                         </div>
+
 
                         <div id="t-head1">
 
@@ -127,28 +129,59 @@
 
                         </div>
 
+
                         <div id="t-head1">
 
                             <div id="detail1">
 
                                 <h2>Amount</h2>
 
+                                <div id="amnt-dts"></div>
+
                             </div>
 
                             <div id="detail5">
 
-                        </div>
+                            </div>
                     
                   
                 </div>
+
+
+                <div id="t-head1">
+
+                    <div id="detail7" >
+
+                        <h2>Remove</h2>
+
+                    </div>
+
+                    <div id="detail6" onclick="remove_items()">
+
+                </div>
+            
+          
+        </div>
 
                
 
             </div>
 
-            <div id="total">Total:
+            <div id="total1">Total:
 
-                <p id="tot-amnt"></p>
+                <p id="tot-amnt1"></p>
+            </div>
+
+            <button id="sub-cal" onclick="gstCalc()">Submit</button>
+
+            <div id="total2">GST:
+
+                <p id="tot-amnt2"></p> 
+            </div>
+
+            <div id="total3">OverAll:
+
+                <p id="tot-amnt3"></p>
             </div>
 
           
@@ -175,6 +208,7 @@
       {
 
          /////validation process
+         var txtPattern = /[0-9]/;
 
        var dtl1 = document.getElementById("det1").value;
        var dtl2 = document.getElementById("det5").value;
@@ -184,6 +218,7 @@
        var dtl6 = document.getElementById("det3").value;
        
       
+       
 
 
        if (dtl1 == "") {
@@ -193,6 +228,10 @@
        else if (dtl2 == "") {
            alert("Please complete Customer Name");
            return false;
+       }else if (txtPattern.test(dtl2) || dtl2 === "")
+       {
+           alert("Customer Name Should be in Letters");
+           return false;
        }
        else if (dtl3 == "") {
            alert("Please complete the Product Code");
@@ -200,6 +239,10 @@
        }
        else if (dtl4 == "") {
            alert("Please complete the Product Name");
+           return false;
+       }else if (txtPattern.test(dtl4) || dtl4 === "")
+       {
+           alert("Product Name Should be in Letters");
            return false;
        }
        else if (dtl5 == "") {
@@ -211,10 +254,13 @@
            return false;
        }
 
+       ///Append the items
+
         var productName = document.getElementById("det6").value;
         var qty = document.getElementById("det3").value;
         var priceUnit = document.getElementById("det2").value;
         var amnt = document.getElementById("det4").value;
+        var btn = "Remove";
 
         //prdct-name
       
@@ -245,12 +291,25 @@
 
        //amnt
 
-       var create = document.createElement("DIV");
-
+       var create = document.createElement("P");
+       
        var txt = document.createTextNode(amnt);
        
        create.appendChild(txt);
-       document.getElementById("detail5").appendChild(create);
+       document.getElementById("detail5").appendChild(create).setAttribute("class","amnt1");
+
+       ///delete
+
+
+       var create = document.createElement("BUTTON");
+
+       var txt = document.createTextNode(btn);
+       
+       create.appendChild(txt);
+       document.getElementById("detail6").appendChild(create);
+
+
+       
 
 
        ///reset the items.
@@ -262,29 +321,107 @@
        document.getElementById("det4").value = "";
 
        
+      ///amnt-details
+
+      var a = document.querySelectorAll(".amnt1");
+
+    //   alert(a);
+
+     var res = 0;
+     var x;
+
+
+      for(var i = 0; i < a.length; i++)
+      {
+          let x = Number(a[i].textContent);
+
+          res += x;
+          
+            
+      }
+      document.querySelector("#tot-amnt1").innerHTML = res;
+
+
       
-  
-    
 
-
-    //total amount
 
    
 }
 
-
-
-
-
-
-
-
-
+////GST calculation
 
       
-      
 
-    </script>
+function gstCalc()
+      {
+          
+            var b = document.querySelector("#tot-amnt1").textContent;
+            //  alert(b);
+            var  z = (b * 12) / 100;
+            document.querySelector("#tot-amnt2").innerHTML = z;
+
+            var c = Number(b) + z;
+            document.querySelector("#tot-amnt3").innerHTML = Math.round(c);
+            
+          
+      }
+    
+    ///removing the items
+
+//   function remove_items()
+//   {
+//    var del1 = document.querySelector("#detail2").querySelectorAll(["div"]);
+//    var del2 = document.querySelector("#detail3").querySelectorAll(["div"]);
+//    var del3 = document.querySelector("#detail4").querySelectorAll(["div"]);
+//    var del4 = document.querySelector("#detail5").querySelectorAll(["p"]);
+//    var del5 = document.querySelector("#detail6").querySelectorAll(["button"]);
+
+//    del1.remove();
+//    del2.remove();
+//    del3.remove();
+//    del4.remove();
+//    del5.remove();
+// //    var k = d.indexOf(["div"]);
+// //    alert(d);
+// //    alert(e);
+// //    alert(f);
+// //    alert(g);
+// //    alert(h);
+
+//   }
+
+     function remove_items()
+     {
+         
+        
+         var ele1 = document.getElementById("detail2");
+         ele1.parentNode.removeChild(ele1);
+
+         
+
+         var ele2 = document.getElementById("detail3");
+         ele2.parentNode.removeChild(ele2);
+
+        
+
+         var ele3 = document.getElementById("detail4");
+         ele3.parentNode.removeChild(ele3);
+
+        
+         var ele4 = document.getElementById("detail5");
+         ele4.parentNode.removeChild(ele4);
+
+         
+
+         var ele5 = document.getElementById("detail6");
+         ele5.parentNode.removeChild(ele5);
+
+         
+        }
+     
+
+
+ </script>
     
 
 
