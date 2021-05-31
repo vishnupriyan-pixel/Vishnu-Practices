@@ -1,0 +1,2334 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.main{
+    height: auto;
+    width: 100%;
+   
+    
+}
+
+.header{
+    width: 100%;
+    background: #fcefd8;
+    padding: 20px 10px;
+    display: block;
+    font-family: var(--zf-primary-semibold);
+    text-align: center;
+    font-weight: 600;
+
+}
+#head-link{
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 auto;
+    border-bottom: 1px solid #000;
+}
+
+.main1{
+    max-width: 1280px;
+    margin: auto;
+}
+
+.sub-header{
+    width: 94%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+
+}
+
+.sub-main{
+    padding: 0 60px;
+}
+
+.zoho-logo{
+    background-image: url(images/icon.png);
+    background-position: -427px 0px;
+    background-repeat: no-repeat;
+    background-size: auto 70px;
+    height: 40px;
+    width: 120px;
+}
+
+.zoho-menus{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 0.3;
+    
+}
+
+.zoho-menus a{
+    color: #000;
+    text-decoration: none;
+    position: relative; 
+    padding-left: 20px;
+   
+}
+
+.search-icon{
+    background-image: url(images/icon.png);
+    background-position: -315px -56px;
+    width: 22px;
+    height: 24px;
+    background-size: auto 80px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.lang::before{
+
+    content: '';
+    background-image: url(images/icon-6.png);
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-position:-88px 0 ;
+    background-size:730px auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+
+}
+
+.head-topic{
+    text-align: center;
+    margin: 60px 0;
+}
+
+.feature-apps{
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #000;
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
+.apps{
+    display: grid;
+    grid-template-columns:1fr 1fr 1.3fr 1.3fr;
+    grid-template-rows: 1fr 1fr;
+    height: 330px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.left-1{
+    display: flex;
+    background: linear-gradient(to right,#e8f4ff 30%,#fff 100%);
+    grid-area:  1/1/span2/3;
+    border:  2px solid #f8f8f8;
+}
+.left-1 a{
+    color: #000;
+    text-decoration: none;
+}
+
+.card-sub{
+    flex-grow: 0.3;
+    /* align-self: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+   
+
+}
+.crm-icon{
+    background-image: url(images/icon.png);
+    background-position: -1047px 20px;
+    background-size: auto 120px; 
+    background-repeat: no-repeat;
+    height: 95px;
+    width: 95px;
+}
+
+#crm-ct{
+    font-weight: 600;
+}
+
+.card-sub1{
+
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 1.6;
+
+
+}
+
+.sub1-btn{
+    height: 40px;
+    width: 120px;
+    background-color:#f0483e;
+    color: white;
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.right-1 {
+    display: flex;
+    border-bottom:2px solid #f8f8f8;
+    border-right: 2px solid #f8f8f8;
+}
+.mail-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -275px 20px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 78px;
+    margin-top: -43px;
+}
+.sub1-btn1{
+    font-size: 10px;
+    text-transform: uppercase;
+    border: 1px solid #03a9f5;
+    padding: 6px 12px;
+    margin-top: 15px;
+    /* display: inline-block; */
+    color: #03a9f5;
+    width: 95px;
+    height: 30px;
+    background-color: white;
+    outline: none;
+}
+
+.sub1-btn1:hover{
+    background-color: #03a9f5;
+    transition: .5s;
+    color: white;
+    cursor: pointer;
+}
+
+.right-2{
+    display: flex;
+    border-bottom:2px solid #f8f8f8;
+}
+
+.project-icon1{
+    background-image: url(images/icon-2.png);
+    background-position: -482px 23px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 78px;
+    margin-top: -52px;
+}
+
+.right-3{
+    display: flex;
+    border-right:2px solid #f8f8f8;
+}
+
+.people-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -206px -173px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 74px;
+    margin-top: -34px;
+}
+
+.right-4{
+    display: flex;
+}
+
+.books-icon{
+    background-image: url(images/icon-2.png);
+    background-position: 5px -2px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 80px;
+    margin-top: -43px;
+
+}
+
+.remote-apps{
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #000;
+    text-align: center;
+    
+}
+
+.remote-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -808px 1px;
+    background-size: auto 303px;
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 71px;
+}
+
+.assist-icon1{
+    background-image: url(images/icon-2.png);
+    background-position: -63px -161px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 64px;
+    width: 67px;
+    margin-top: -50px;
+}
+
+.meet-icon{
+
+    background-image: url(images/icon-2.png);
+    background-position: -838px 4px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 64px;
+    width: 66px;
+    margin-top: -50px;
+}
+
+.work-icon{
+    background-image: url(images/icon-2.png);
+    background-position:-710px -2px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 64px;
+    width: 66px;
+    margin-top: -50px;
+}
+
+.cliq-icon{
+    background-image: url(images/icon-2.png);
+    background-position:-903px -1px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 64px;
+    width: 66px;
+    margin-top: -28px;
+}
+
+.card-2{
+    height: 200px;
+    width: 100%;
+    border: 2px solid #f8f8f8;
+    display: flex;
+}
+
+.card-2_child1{
+    flex-grow: 1;
+    /* align-self: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+
+}
+
+.zoho-one-logo{
+
+    background-image: url(images/icon-2.png);
+    background-position: -836px -162px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 66px;
+}
+
+.card-2_child2{
+    flex-grow: 1;
+    /* align-self: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#card-top{
+    position: relative;
+    left: 50%;
+    top: -10px;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #000;
+    background: #fff;
+    z-index: 1;
+    margin-left: -50px;
+}
+
+.card-3{
+    /* height: 500px; */
+    width: 100%;
+    border: 1px solid #f8f8f8;
+    border-top: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 25px;
+}
+
+.card-3-child1{
+    display: flex;
+    flex-direction: column;
+    /*  align-items: center; */
+    padding: 30px 30px 25px 40px;
+    line-height: 27px;
+
+}
+.crmplus-logo{
+    background-image: url(images/icon-2.png);
+    background-position: -519px -161px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 66px;
+}
+
+.wrkplace-logo{
+    background-image: url(images/icon-2.png);
+    background-position: -581px -162px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 66px;
+}
+
+.fplus-logo{
+    background-image: url(images/icon-2.png);
+    background-position: -642px -162px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 66px;
+}
+
+.createplus-logo{
+
+    background-image: url(images/icon-2.png);
+    background-position: -62px -223px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 66px;
+}
+
+.p-plus-logo{
+    background-image: url(images/icon-2.png);
+    background-position: -771px -162px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 66px;
+}
+
+.itm-logo{
+    background-image: url(images/icon-2.png);
+    background-position: -707px -162px;
+    background-size: auto 290px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 66px;
+}
+
+.marketing-logo{
+    background-image: url(images/icon-1.png);
+    background-position: -812px 5px;
+    background-size: auto 63px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 60px;
+}
+
+
+
+.z-apps{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* height: 1100px; */
+    width: 100%;
+
+    
+}
+
+.z-top{
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+    
+}
+.zbox-1{
+    border-right: 1px solid #f8f8f8;
+    padding: 30px 20px 40px;
+}
+.sales-apps{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6,1fr);
+    height: 80%;
+    /* border-right: 1px solid #f8f8f8; */
+}
+.box-big{
+    grid-area: 1/1/2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f8f8f8;
+    border-right: 1px solid #f8f8f8;
+}
+
+.crm-icon1{
+    background-image: url(images/icon-3.png);
+    background-position: -145px -137px;
+    background-size: auto 658px;
+    background-repeat: no-repeat;
+    height: 79px;
+    width: 77px;
+}
+.box-small{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #f8f8f8;
+    border-right: 1px solid #f8f8f8;
+}
+
+.bigi-icon{
+    background-image: url(images/icon-2.png);
+    background-position: 7px -147px;
+    background-size: auto 336px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 45px;
+}
+.app-name{
+    font-size: 11px;
+}
+.app-name1{
+    font-size: 11px;
+}
+.camp-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -368px -72px;
+    background-size: auto 332px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 40px;
+}
+
+.form-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -147px -72px;
+    background-size: auto 332px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 40px;
+}
+
+.sign-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -183px -72px;
+    background-size: auto 332px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 40px;
+}
+
+.social-icon1{
+    background-image: url(images/icon-2.png);
+    background-position: -219px -72px;
+    background-size: auto 332px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 40px;
+}
+
+.salesiq-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -257px -72px;
+    background-size: auto 332px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 40px;
+}
+.survey-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -295px -72px;
+    background-size: auto 332px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 38px;
+}
+
+.salesbox-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -329px -72px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.sites-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -403px -72px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+
+}
+
+.contact-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -439px -72px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+
+}
+
+.pagesen-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -110px -72px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.backstage-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -585px -109px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+.commerce-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -548px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.booking-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -807px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.market-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -841px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.work-apps{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(7,1fr);
+    height: 93%;
+    /* border-right: 1px solid #f8f8f8; */
+}
+
+.zbox-2{
+    border-right: 1px solid #f8f8f8;
+    padding: 30px 20px 40px;
+}
+
+.zbox-3{
+    /* border-right: 1px solid #f8f8f8; */
+    padding: 30px 20px 40px;
+}
+
+.mail-icon1{
+    background-image: url(images/icon-2.png);
+    background-position: -275px 20px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 90px;
+    width: 78px;
+}
+
+.cliq-icon1{
+
+    background-image: url(images/icon-2.png);
+    background-position: -768px -72px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.workdrive-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -878px -109px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.docs-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -806px -71px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.writer-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -842px -71px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.sheet-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -878px -71px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.show-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -914px -71px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.project-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -951px -71px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.sprint-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -988px -71px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.bugtrack-icon{
+
+    background-image: url(images/icon-2.png);
+    background-position: -1024px -71px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.connect-icon{
+
+    background-image: url(images/icon-2.png);
+    background-position: -1061px -71px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.meeting-icon{
+
+    background-image: url(images/icon-2.png);
+    background-position: -1px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.vault-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -36px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.showtime-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -73px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.notebook-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -109px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.wiki-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -147px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.tinbox-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -293px -145px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.tmail-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -330px -145px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.finance-apps{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
+    height: 43%;
+    
+}
+
+.books-icon1{
+    background-image: url(images/icon-2.png);
+    background-position: 5px -2px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 80px;
+}
+
+.invent-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -513px -69px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.invoice-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -549px -69px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.subs-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -588px -69px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.expense-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -622px -70px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 39px;
+    width: 37px;
+}
+
+.checkout-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -659px -72px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 38px;
+    width: 37px;
+}
+
+.payroll-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -770px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 38px;
+    width: 37px;
+}
+
+.finance-sub{
+    border-top: 1px solid #f8f8f8;
+    margin-top: 40px;
+}
+
+.finance-sub1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 1fr;
+    height: 30%;
+}
+
+.recruit-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -408px 0px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 80px;
+}
+
+.people-icon1{
+    background-image: url(images/icon-2.png);
+    background-position: -401px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 38px;
+    width: 37px;
+}
+
+.worker-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -730px -111px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 38px;
+    width: 37px;
+}
+
+.backwork-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -183px -145px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 38px;
+    width: 37px;
+}
+
+.IT-apps{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    height: 80%;
+}
+
+.catalyst-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -551px 0px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 68px;
+}
+
+.servicedesk-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -256px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 38px;
+    width: 37px;
+}
+
+.mobdevice-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -293px -109px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.pmanager-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -660px -109px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.remoteacc-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -73px -144px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.site-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -329px -109px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.logmanag-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -952px -109px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.identity-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -990px -109px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.desktopcent-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -220px -147px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.c-apps{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    height: 36%;
+}
+
+.zbox-4{
+    border-right: 1px solid #f8f8f8;
+    padding: 30px 20px 40px;
+}
+
+.desk-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -344px 0px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 68px;
+}
+
+.assist-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -220px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.lens-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -36px -146px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.c-sub{
+    border-top: 1px solid #f8f8f8;
+    margin-top: 40px;
+}
+
+.analyt-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -693px 0px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 68px;
+}
+
+.zbox-5{
+    border-right: 1px solid #f8f8f8;
+    padding: 30px 20px 40px;
+}
+
+.zbox-6{
+    /* border-right: 1px solid #f8f8f8; */
+    padding: 30px 20px 40px;
+}
+
+
+.custom-apps{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    height: 40%;
+}
+
+.creator-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -208px 0px;
+    background-size: auto 311px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 68px;
+}
+
+.flow-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -475px -108px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.office-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -621px -110px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.orchest-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -696px -110px;
+    background-size: auto 329px;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.banner-1{
+    max-width: 1040px;
+    width: 95%;
+    margin: 125px auto 20px;
+    display: flex;
+}
+
+.banner-1>a{
+    width: 48%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+.banner-box{
+    background: url(images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 25px 0;
+}
+
+.banner-box p{
+    color: #ffd600;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.banner-1 p{
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.l-more{
+    padding: 10px 15px;
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    line-height: 1;
+    border-radius: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.banner-box1{
+    margin-right: 0;
+    margin-left: 2%;
+    background-image: url(images/bg-2.jpg);
+    background-size: 50%;
+    padding-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-box1 h3{
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-box1 p{
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.shield{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(images/privacy-shield.png) no-repeat;
+    content: "";
+    background-size: 35%;
+    background-position: center;
+}
+
+.customers{
+    height: 300px;
+    width: 100%;
+    display: flex;
+}
+
+.youtube-box{
+    flex-grow: 0.3;
+}
+
+.product{
+    flex-grow: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.product-1{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.hyatt-icon{
+    background-image: url(images/icon-4.png);
+    width: 108px;
+    background-position: -937px 0;
+    background-size: 1045px auto;
+    height: 40px;
+    background-repeat: no-repeat;
+   
+}
+
+.kpmg-icon{
+    background-image: url(images/icon-4.png);
+    background-position: -144px 0;
+    background-size: 1045px auto;
+    height: 40px;
+    width: 67px;
+    background-repeat: no-repeat;
+}
+
+.loreal-icon{
+    background-image: url(images/icon-4.png);
+    width: 106px;
+    background-position: -431px -40px;
+    background-size: 1045px auto;
+    height: 40px;
+    background-repeat: no-repeat; 
+}
+
+.product-2{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.mahindra-icon{
+    background-image: url(images/icon-4.png);
+    width: 122px;
+    background-position: -112px -40px;
+    background-size: 1045px auto;
+    height: 40px;
+    background-repeat: no-repeat;
+}
+
+.tata-icon{
+    background-image: url(images/icon-4.png);
+    width: 133px;
+    background-position: -112px -80px;
+    background-size: 1045px auto;
+    height: 40px;
+    background-repeat: no-repeat;   
+}
+
+.suzuki-icon{
+    background-image: url(images/icon-4.png);
+    width: 31px;
+    background-position: -420px 0;
+    background-size: 1045px auto;
+    height: 40px;
+    background-repeat: no-repeat; 
+}
+
+.product a{
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #03a9f5;
+    margin-left: 50px;
+
+}
+
+.details{
+    display: flex;
+    height: 200px;
+    width: 100%;
+}
+
+.d-box{
+    flex-grow: 1;
+    display: inline;
+    padding: 10px 10px 10px 30px;
+    line-height: 1.5;
+}
+
+.d-box p {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+
+
+.d-box a{
+    text-decoration: none;
+    color: #000;
+}
+
+.d-box h5{
+    font-size: 17px;
+}
+
+.sub-icon1::before{
+    content: '';
+    position: absolute;
+    /* left: 0;
+    top: 0; */
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: -480px -50px;
+    background-size: auto 120px;
+    background-image: url(images/icon.png);
+}
+
+.sub-icon2::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: -512px -50px;
+    background-size: auto 120px;
+    background-image: url(images/icon.png);
+}
+
+.footer-work{
+    /* height: 670px; */
+    width: 100%;
+    background-color: #333;
+}
+
+.menus{
+    display: flex;
+    justify-content: space-evenly;
+    padding:35px 50px 30px 30px;
+
+}
+
+.apps1{
+    color: #ccc;
+    line-height: 2;
+    list-style-type: none;
+}
+
+.footer-search{
+    text-align: center;
+    padding: 20px;
+}
+
+.search-bar{
+
+    background: transparent;
+    padding: 12px 60px 12px 12px;
+    font-size: 15px;
+    max-width: 75%;
+    margin: 0;
+    width: 100%;
+    border: 1px solid #666;
+    color: #fff;
+    outline: none;
+
+}
+
+.search-icon1{
+    border: 1px solid #666;
+    background: #2d2d2d;
+    border-left: 0;
+    height: 100%;
+    width: 48px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 12%;
+    
+}
+
+.search-icon1 span{
+    background: url(images/icon-5.png) no-repeat -111px -13px/auto 40px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.sites{
+    list-style: none;
+    text-align: center;
+}
+
+.sites a{
+    
+    border-right: 1px solid #ccc;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 11px;
+}
+
+.sites li{
+    display: inline-block;
+}
+
+#rights{
+    color: #ccc;
+    font-size: 11px;
+    text-align: center;
+}
+
+#lang{
+    color: #ccc;
+    text-align: center;
+    font-size: 11px;
+    position: relative;
+    cursor: pointer;
+}
+
+#world-icon{
+    background-image: url(images/icon-7.png);
+    background-size: 400px auto;
+    background-position: -258px 0;
+    background-repeat: no-repeat;
+    display: block;
+    height: 20px;
+    left: 46.8%;
+    position: absolute;
+    top: -2px;
+    width: 20px
+}
+
+.social-media{
+    text-align: center;
+}
+
+.social-icon{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin: 0 3px;
+    background-image: url(images/icon.png);
+    background-size: auto 110px;
+    background-repeat: no-repeat;
+}
+
+
+.twitter-icon{
+    background-position: -737px -76px;
+}
+
+.fb-icon{
+    background-position: -678px -76px;
+}
+
+.youtube-icon{
+    background-position: -708px -76px;
+}
+
+.link-icon{
+    background-position: -767px -76px;
+}
+
+.insta-icon{
+    background-position: -797px -76px;
+}
+
+.sales-apps .box-big:hover{
+    border-bottom: 1px solid #1aabe2;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.sales-apps .box-small:hover{
+    border-bottom: 1px solid #1aabe2;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-2 .box-big:hover{
+    border-bottom: 1px solid #ea785d;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-2 .box-small:hover{
+    border-bottom: 1px solid #ea785d;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-3 .box-big:hover{
+    border-bottom: 1px solid #48bbb4;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-3 .box-small:hover{
+    border-bottom: 1px solid #48bbb4;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.finance-sub1 .box-big:hover{
+    border-bottom: 1px solid #fc0;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.finance-sub1 .box-small:hover{
+    border-bottom: 1px solid #fc0;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-4 .box-big:hover{
+    border-bottom: 1px solid #5ab46c;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-4 .box-small:hover{
+    border-bottom:  1px solid #5ab46c;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-5 .box-big:hover{
+    border-bottom: 1px solid #5ab46c;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-5 .box-small:hover{
+    border-bottom: 1px solid #5ab46c;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-6 .box-big:hover{
+    border-bottom: 1px solid #4661ba;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.zbox-6 .box-small:hover{
+    border-bottom: 1px solid #4661ba;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.z-apps  :last-child{
+    border-bottom: 1px solid #fff;
+}
+
+.finance-apps :nth-child(6){
+    border-bottom: 1px solid #fff;
+}   
+
+.finance-sub1 :nth-child(3){
+    border-bottom: 1px solid #fff;
+}
+
+.custom-apps :nth-child(3){
+    border-bottom: 1px solid #fff;
+}
+
+.apps1 li:hover{
+    /* box-shadow: 0 10px 10px -10px rgb(0 0 0 / 50%); */
+    transform: scale(1.1);
+}
+
+.sites li:hover{
+    transform: scale(1.1);
+}
+
+.social-media  a:hover{
+    transform: scale(1.2);
+}
+
+.sub1-btn:hover{
+    transform: scale(1.1);
+}
+
+.crmplus-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.wrkplace-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.fplus-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.createplus-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.p-plus-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.itm-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.marketing-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.zoho-one-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.zoho-menus a:hover{
+    transform: scale(1.1);
+}
+
+.zoho-menus span:hover{
+    transform: scale(1.1);
+}
+
+#s-top{
+    text-align: center;
+}
+
+#e-top{
+    text-align: center;
+}
+#f-top{
+    text-align: center;
+}
+#h-top{
+    text-align: center;
+}
+#i-top{
+    text-align: center;
+}
+
+#c-top{
+    text-align: center;
+}
+#cs-top{
+    text-align: center;
+}
+
+#c1-cont{
+    letter-spacing: 0.5px;
+}
+
+#c1-prt{
+    color: #03a9f5;
+    line-height: 40px;
+}
+
+#mt{
+    font-size: 13px;
+}
+
+#cl{
+    font-size: 13px;
+}
+
+#c3-p1{
+    width: 113%;
+}
+
+#log-head{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#log-head1{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#log-head2{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#log-head3{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#log-head4{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#log-head5{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#log-head6{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+
+@media only screen and (max-width:1248px){
+    .zoho-menus a{
+        font-size: 14px;
+    }
+
+    #crm-cont{
+        font-size: 14px;
+    }
+
+    .mail-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -249px 20px;
+    background-size: auto 279px;
+    background-repeat: no-repeat;
+    height: 82px;
+    width: 65px;
+    margin-top: -52px;
+    }
+
+    .crm-icon{
+        background-image: url(images/icon.png);
+        background-position: -823px 20px;
+        background-size: auto 95px;
+        background-repeat: no-repeat;
+        height: 95px;
+        width: 80px;
+    }
+
+    .card-sub{
+        padding: 18px;
+    }
+
+    #crm-ct{
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    #box-h{
+        font-size: 20px;
+    }
+
+    .sub1-btn{
+        height: 29px;
+        width: 91px;
+        font-size: 11px;
+    }
+
+    .project-icon1{
+        background-image: url(images/icon-2.png);
+        background-position: -407px 18px;
+        background-size: auto 259px;
+        background-repeat: no-repeat;
+        height: 77px;
+        width: 54px;
+        margin-top: -50px;
+    }
+
+    .people-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -179px -149px;
+    background-size: auto 267px;
+    background-repeat: no-repeat;
+    height: 59px;
+    width: 60px;
+    margin-top: -47px;
+    }
+
+    .books-icon{
+
+    background-image: url(images/icon-2.png);
+    background-position: 14px 10px;
+    background-size: auto 258px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 76px;
+    margin-top: -61px;
+    }
+
+    .remote-icon{
+        background-image: url(images/icon-2.png);
+        background-position: -823px 20px;
+        background-size: auto 258px;
+        background-repeat: no-repeat;
+        height: 69px;
+        width: 76px;
+       
+    }
+
+    .remote-icon{
+
+    background-image: url(images/icon-2.png);
+    background-position: -735px 6px;
+    background-size: auto 276px;
+    background-repeat: no-repeat;
+    height: 69px;
+    width: 66px;
+    }  
+    
+    .assist-icon1{
+        background-image: url(images/icon-2.png);
+        background-position: -59px -149px;
+        background-size: auto 267px;
+        background-repeat: no-repeat;
+        height: 59px;
+        width: 60px;
+        margin-top: -47px;
+    }
+
+    .meet-icon{
+    background-image: url(images/icon-2.png);
+    background-position: 6px -164px;
+    background-size: auto 496px;
+    background-repeat: no-repeat;
+    height: 59px;
+    width: 60px;
+    margin-top: -47px;
+    }
+
+    .work-icon{
+        background-image: url(images/icon-2.png);
+        background-position: -1321px -171px;
+        background-size: auto 496px;
+        background-repeat: no-repeat;
+        height: 59px;
+        width: 60px;
+        margin-top: -47px;
+    }
+
+    .cliq-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -1158px -104px;
+    background-size: auto 496px;
+    background-repeat: no-repeat;
+    height: 59px;
+    width: 60px;
+    margin-top: -47px;
+    }
+
+    #world-icon{
+        left: 46.7%;
+    }
+
+    #s-top{
+        white-space: nowrap;
+    }
+
+    #h-top{
+        white-space: nowrap;
+    }
+
+    #i-top{
+        white-space: nowrap;
+    }
+
+    #c-top{
+        white-space: nowrap;
+    }
+
+    #cs-top{
+        white-space: nowrap;
+    }
+
+    #c3-p{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:1212px){
+    #f-top{
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width:1196px){
+
+    .card-2_child1{
+        align-items: flex-start;
+    }
+
+    #s-top{
+        font-size: 15px;
+    }
+    
+    #e-top{
+       font-size: 15px;
+    }
+    #f-top{
+       font-size: 15px;
+    }
+    #h-top{
+       font-size: 15px;
+    }
+    #i-top{
+       font-size: 15px;
+    }
+    
+    #c-top{
+       font-size: 15px;
+    }
+    #cs-top{
+       font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width:1184px){
+    .app-name1{
+        white-space: nowrap;
+    }
+    .app-name{
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width:1137px){
+    .mail-icon{
+    background-image: url(images/icon-2.png);
+    background-position: -221px 22px;
+    background-size: auto 250px;
+    background-repeat: no-repeat;
+    height: 78px;
+    width: 65px;
+    margin-top: -68px;
+    }
+
+    .project-icon1{
+        background-image: url(images/icon-2.png);
+        background-position: -356px 18px;
+        background-size: auto 229px;
+        background-repeat: no-repeat;
+        height: 68px;
+        width: 54px;
+        margin-top: -62px;
+    }
+
+    .people-icon{
+        background-image: url(images/icon-2.png);
+        background-position: -149px -125px;
+        background-size: auto 224px;
+        background-repeat: no-repeat;
+        height: 49px;
+        width: 53px;
+        margin-top: -59px;
+    }
+
+    .books-icon{    
+        background-image: url(images/icon-2.png);
+        background-position: 20px 10px;
+        background-size: auto 237px;
+        background-repeat: no-repeat;
+        height: 59px;
+        width: 77px;
+        margin-top: -70px;
+    }
+
+    .assist-icon1{
+        background-image: url(images/icon-2.png);
+        background-position: -52px -133px;
+        background-size: auto 237px;
+        background-repeat: no-repeat;
+        height: 51px;
+        width: 53px;
+        margin-top: -52px;
+    }
+
+    .meet-icon{
+        background-image: url(images/icon-2.png);
+        background-position: 9px -154px;
+        background-size: auto 456px;
+        background-repeat: no-repeat;
+        height: 46px;
+        width: 60px;
+        margin-top: -56px;
+    }
+
+    .work-icon{
+        background-image: url(images/icon-2.png);
+        background-position: -1225px -159px;
+        background-size: auto 460px;
+        background-repeat: no-repeat;
+        height: 59px;
+        width: 56px;
+        margin-top: -47px;
+    }
+
+    .cliq-icon{
+        background-image: url(images/icon-2.png);
+    background-position: -1004px -87px;
+    background-size: auto 430px;
+    background-repeat: no-repeat;
+    height: 59px;
+    width: 48px;
+    margin-top: -49px;
+    }
+
+    #c1-cont{
+        font-size: 15px;
+    }
+    .zoho-one-logo{
+        background-image: url(images/icon-2.png);
+        background-position: -732px -140px;
+        background-size: auto 254px;
+        background-repeat: no-repeat;
+        height: 67px;
+        width: 56px;
+    }
+
+    #c1-head{
+        font-size: 15px;
+    }
+
+    #c1-prt{
+        font-size: 15px;
+    }
+
+    .crmplus-logo{
+    background-image: url(images/icon-2.png);
+    background-position: -463px -137px;
+    background-size: auto 260px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 59px;
+    }
+
+    .wrkplace-logo{
+        background-image: url(images/icon-2.png);
+        background-position: -522px -136px;
+        background-size: auto 260px;
+        background-repeat: no-repeat;
+        height: 67px;
+        width: 60px;
+    }
+    
+    .fplus-logo{
+        background-image: url(images/icon-2.png);
+        background-position: -576px -137px;
+        background-size: auto 260px;
+        background-repeat: no-repeat;
+        height: 67px;
+        width: 62px;
+    }
+
+    .createplus-logo{
+        background-image: url(images/icon-2.png);
+        background-position: -59px -198px;
+        background-size: auto 257px;
+        background-repeat: no-repeat;
+        height: 67px;
+        width: 55px;
+    }
+
+    .p-plus-logo{
+    background-image: url(images/icon-2.png);
+    background-position: -693px -143px;
+    background-size: auto 260px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 63px;
+    }
+
+    .itm-logo{
+        background-image: url(images/icon-2.png);
+        background-position: -635px -142px;
+        background-size: auto 260px;
+        background-repeat: no-repeat;
+        height: 67px;
+        width: 62px;
+    }
+
+    .marketing-logo{
+    background-image: url(images/icon-1.png);
+    background-position: -696px 8px;
+    background-size: auto 54px;
+    background-repeat: no-repeat;
+    height: 67px;
+    width: 52px;
+    }
+
+    #e-top{
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width:1097px){
+
+    .apps{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1.5fr 1.3fr;
+        grid-template-rows: 1.5fr 1fr 1fr 1fr;
+        height: 540px;
+    }
+
+    .left-1{
+        grid-area: 1/2/3/4;
+        width: 117%;
+        height: 205px;
+    }
+    .right-1{
+        grid-area: 4/2;
+        padding-bottom: 30px;
+    }
+    .right-2{
+        grid-area: 4/3;
+        margin-top: -21px;
+        padding-left: 20px;
+    }
+    .right-3{
+        grid-area: 5/2;
+        margin-bottom: -40px;
+    }
+
+    .people-icon{
+        margin-right: 12px;
+    }
+
+    /* .card-sub1{
+        padding-right: 17px;
+    }  */
+    .right-4{
+        grid-area: 5/3;
+        margin-top: 17px;
+        padding-top: 19px;
+        padding-left: 20px;
+    }
+
+    .books-icon{
+        margin-right: 8px;
+    }
+
+    .card-2{
+        flex-direction: column;
+        margin-top: 70px;
+        margin-left: 150px;
+        width: 65%;
+        height: 380px;
+    }
+
+    .card-2_child1{
+        align-items: center;
+        margin-top: -58px;
+    }
+
+    .card-2_child2{
+        margin-top: -101px;
+    }
+
+    .zoho-one-logo{
+    background-image: url(images/icon-2.png);
+    background-position: -871px -165px;
+    background-size: auto 300px;
+    background-repeat: no-repeat;
+    height: 86px;
+    width: 59px;
+    }
+
+    #c1-head{
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+    #c1-cont{
+        width: 531px;
+        padding-left: 54px;
+        text-align: center;
+        font-size: 16px;
+        margin-left: 45px;
+    }
+
+    #c1-prt{
+        align-self: center;
+        font-size: 17px;
+    }
+
+    #mt{
+        padding-bottom: 11px;
+    }
+
+    #cl{
+        padding-bottom: 16px;
+    }
+
+    .card-2{
+        border-bottom: none;
+    }
+
+    .card-3{
+        grid-template-columns: 1fr;
+        width: 65%;
+        margin-left: 150px;
+        border: 2px solid #f8f8f8;
+        border-top: none;
+    }
+
+    .card-3-child1{
+        align-items: center;
+    }
+
+    #c3-p1{
+        width: 0%;
+    }
+
+
+    .card-3-child1{
+        border-bottom: 2px solid #f8f8f8;
+    }
+
+    .card-3-child1:last-child{
+        border-bottom: none;
+    }
+
+    .card-3-child1:first-child{
+        border-top: 2px solid #f8f8f8;
+    }
+
+    .crmplus-logo{
+        background-position: -567px -176px;
+        background-size: auto 317px;
+        height: 71px;
+        width: 64px;
+
+    }
+
+    .wrkplace-logo{
+        background-position: -635px -176px;
+        background-size: auto 315px;
+        height: 69px;
+        width: 62px;
+    }
+
+    .fplus-logo{
+        background-position: -705px -175px;
+        background-size: auto 315px;
+        height: 70px;
+        width: 63px
+    }
+
+    .createplus-logo{
+        background-position: -72px -241px;
+        background-size: auto 310px;
+        height: 69px;
+        width: 62px;
+    }
+
+    .p-plus-logo{
+        background-position: -831px -172px;
+        background-size: auto 310px;
+        height: 69px;
+        width: 65px
+    }
+
+    .itm-logo{
+        background-position: -761px -173px;
+        background-size: auto 310px;
+        height: 69px;
+        width: 62px;
+    }
+
+    .marketing-logo{
+        background-position: -867px 0px;
+        background-size: auto 67px;
+        height: 67px;
+        width: 59px;
+    }
+
+}
+
+
