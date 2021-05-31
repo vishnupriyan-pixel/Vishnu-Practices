@@ -1,0 +1,304 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Noticia Text', serif;
+}
+
+.main{
+    height: 670px;
+    width: 100%;
+    background-color: rgb(244,244,244);
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    
+}
+
+.banner {
+    background-image: url(images/new.gif);
+    background-repeat: no-repeat;
+    background-size: 1303px 375px;
+    height: 354px;
+    grid-area: 2/1/3/1;
+
+}
+
+.sub-head{
+    /* height: 600px; */
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.sub1{
+    display: flex;
+    margin: 35px 0px 0px 190px;
+    
+}
+
+.head1{
+    display: flex;
+    flex-direction: column;
+}
+
+#sub1-dts{
+    color:rgb(77,77,77);
+    font-size: 39px;
+    font-weight: bold;
+    letter-spacing: .8px;
+}
+
+#role{
+    font-size: 20px;
+    padding: 3px 0px 0px 9px;
+    color:rgb(77,77,77);
+    font-weight:bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+.my-data{
+
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px;
+    background-image: url(images/my1.JPG);
+    background-size: 361px;
+    background-repeat: no-repeat;
+    background-position: -140px -1px;
+   
+}
+
+.my-data:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 1px 7px 10px 2px  lightgrey;
+    
+}
+
+.my-wrk{
+    display: flex;
+    flex-direction: column;
+    margin: 45px 0px 0px 100px;
+}
+
+#wrk-dt{
+    font-size: 30px;
+    font-weight: bold;
+    color:rgb(77,77,77);
+    letter-spacing: .9px;
+}
+.wrk-order{
+    display: flex;
+    margin-top: 70px;
+    justify-content: space-around;
+}
+.wrk-part1{
+    /* border: 1px solid black; */
+    height: 84px;
+    width: 84px;
+    border-radius: 50%;
+    background-color: rgb( 97,208,212);
+}
+
+#prjct{
+    padding:28px 0px 0px 7px;
+}
+
+#prjct span{
+    color:rgb( 255,255,255);
+    /* font-weight: bold; */
+    font-size: 16px;
+    letter-spacing: .6px;
+}
+
+.wrk-part1:hover{
+    cursor: pointer;
+    box-shadow: 1px 5px 10px 2px  lightgrey;
+    transform: scale(1.05);
+}
+
+#p1{
+    margin-left: 3px;
+}
+
+#p2{
+    margin-left: -3px;
+}
+
+#p3{
+    margin-left: 8px;
+}
+
+#p4{
+    margin-left: 26px;
+}
+
+#p5{
+    margin-left: 12px;
+}
+
+#p6{
+    margin-left: 8px;
+}
+
+@media only screen and (max-width:1161px){
+
+    .sub1{
+        margin: 35px 0px 0px 85px;
+    }
+}
+
+@media only screen and (max-width:1097px){
+    .my-wrk{
+        margin: 45px 0px 0px 45px;
+    }
+
+    .banner{
+       background-size:  1076px 375px;
+    }
+}
+
+@media only screen and (max-width:979px){
+    .wrk-part1{
+        height: 75px;
+        width: 75px;
+    }
+
+    #prjct span{
+        font-size: 14px;
+    }
+
+    #prjct{
+        padding: 24px 0px 0px 7px;
+    }
+
+ 
+    
+    #p4{
+        margin-left: 22px;
+    }
+
+
+}
+
+@media only screen and (max-width:932px){
+    .banner{
+        background-size: 943px 375px;
+    }
+}
+
+@media only screen and (max-width:899px){
+    #sub1-dts{
+        font-size: 30px;
+    }
+
+    #role{
+        font-size: 17px;
+    }
+
+    .my-data{
+        height: 125px;
+        width: 125px;
+        background-size: 345px;
+    }
+
+    .sub1{
+        margin: 35px 0px 0px 55px;
+    }
+
+    .my-wrk{
+        margin: 45px 0px 0px 13px;
+    }
+}
+
+@media only screen and (max-width:826px){
+    .wrk-part1{
+        height: 65px;
+        width: 65px;
+    }
+
+    #prjct span{
+        font-size: 12px;
+    }
+
+    #prjct{
+        padding: 19px 0px 0px 7px;
+    }
+
+    #p3{
+        margin-left: 5px;
+    }
+
+    #p4{
+        margin-left: 18px;
+    }
+
+    #p5{
+        margin-left: 10px;
+    }
+
+    #p6{
+        margin-left: 5px;
+    }
+
+    .banner{
+        background-size: 815px 375px;
+    }
+    #wrk-dt{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width:717px){
+
+    .sub1{
+        margin:35px 0px 0px 7px;
+    }
+
+    .my-wrk{
+        margin: 45px 0px 0px -25px;
+    }
+
+    .banner{
+        background-size: 709px 375px;
+    }
+}
+
+@media only screen and (max-width:645px){
+
+    #sub1-dts{
+        font-size: 20px;
+    }
+
+    #role{
+        font-size: 14px;
+    }
+
+    .my-data{
+        height: 100px;
+        width: 100px;
+        background-size: 320px;
+    }
+
+    .banner{
+        background-size: 633px 375px;
+    }
+
+    .sub-head{
+        grid-template-columns: 1.4fr 3fr;
+    }
+
+    .my-wrk{
+        margin: 36px 0px 0px -25px;
+    }
+
+    #wrk-dt{
+        font-size: 22px;
+    }
+
+
+}
