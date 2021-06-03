@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.calendar{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.calender1{
+    background-image: url(../calendar/calnd.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    width: 110%;
+    background-size: 569px 581px;
+    padding: 19px;
+}
+
+input{
+    /* border: 1px solid black; */
+    height: 30px;
+    width: 141px;
+    margin-left: 9px;
+    box-shadow: 2px 1px 2px 1px lightgrey;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#mnt{
+    display: inline;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+
+#btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#btn1{
+    height: 30px;
+    width: 100px;
+    border-radius: 6px;
+    font-size: 17px;
+    background-color:#48d16b;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px 2px lightgrey;
+    outline: none;
+    padding: 0;
+
+}
+
+#btn1:hover{
+    box-shadow: 1px 2px 2px 2px lightgrey;
+    transform: scale(1.05);
+}
+
+.data{
+    display: flex;
+    justify-content: center;
+    margin-left: 45px;
+}
+
+#dat1{
+    font-size: 26px;
+    font-weight: 800;
+}
+
+#dat2{
+    font-size: 26px;
+    margin-left: 10px;
+    font-weight: 800;
+}
+
+#dat3{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-left: 43px;
+}
