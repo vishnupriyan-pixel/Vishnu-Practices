@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    height: 557px;
+    width: 100%;
+    /* display: flex; */
+    align-items: center;
+}
+
+.sub-main{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    height: 500px;
+    width: 100%;
+}
+
+.mnth-details{
+    background-image: url(bc.jpg);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: 534px 505px;
+    
+}
+
+.data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#yr-dts{
+    font-size: 45px;
+    letter-spacing: 0.8px;
+    color: white;
+    font-weight: 800;
+    text-align: center;
+}
+
+#mnt{
+    font-size: 35px;
+    font-weight: 800;
+    color:white;
+    text-align: center;
+}
+
+#mnt-s{
+    width: 180px;
+    height: 28px;
+    align-self: center;
+    border-radius: 8px;
+    outline: none;
+    font-size: 18px;
+    /* padding-left: 20px; */
+    text-align: center;
+}
+
+#gt-mnt{
+    height: 35px;
+    width: 105px;
+    align-self: center;
+    border-radius: 6px;
+    outline: none;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+}
+
+#gt-mnt:hover{
+background-color: white;
+color: black;
+cursor: pointer;
+box-shadow: 1px 1px 1px 1px lightgrey;
+}
+
+.mnt-order{
+    display: grid;
+    /* grid-template-rows: 0.4fr repeat(6,1fr); */
+    grid-template-columns: repeat(7,1fr);
+    /* border: 1px solid black; */
+    grid-template-rows:  44px;
+}
+
+.mnt-order div{
+    border-right:1px solid black;
+    border-bottom: 1px solid #000;
+}
+
+.mnt-order1 div{
+    border-right:1px solid black;
+    border-bottom: 1px solid #000;
+}
+
+#mnth-name{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    letter-spacing: 1px;
+    
+}
+
+.mnt-order1{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-auto-rows: auto;
+
+}
+
+.mnt-order p {
+    text-align: center;
+    align-self: center;
+    
+}
+
+.mnt1{
+    display: grid;
+    grid-template-rows: 0.1fr;
+}
+
+.mnt-order1 p{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.mnt-order p:hover{
+    cursor: pointer;
+    color: #20d3d9;
+}
+
+.mnt-order1 p:hover{
+    cursor: pointer;
+    color: #20d3d9;
+}
+#mnth-name1{
+
+    display: none;
+}
+
+@media only screen and (max-width:950px){
+
+    .sub-main{
+        grid-template-columns: none;
+    }
+
+    .mnth-details{
+        background-size: 940px 505px;   
+    }
+    #mnth-name{
+        display: none   ;
+        
+    }
+    #mnth-name1{
+        display: inline;
+        text-align: center;
+    }
+
+}
