@@ -21,7 +21,7 @@
 }
 
 .calender1{
-    background-image: url(../calendar/calnd.jpg);
+    background-image: url(calnd.jpg);
     height: 500px;
     background-repeat: no-repeat;
     width: 110%;
@@ -97,23 +97,4 @@ input{
     font-weight: 800;
     margin-top: 10px;
     margin-left: 43px;
-}
-
-@media only screen and (max-width:375px){
-
-    .main{
-        margin-top: 40px;
-    }
-    
-
-    .calender1{
-        height: 500px;
-        background-repeat: no-repeat;
-        width: 100%;
-        background-size: 419px 540px;
-    }
-
-    input{
-        width: 93px;
-    }
 }
