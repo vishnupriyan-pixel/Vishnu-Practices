@@ -99,11 +99,32 @@ function month_dis(){
      
         var dat = 1;
 
+        var f_day = 0;
+
         var a = document.getElementById("mnt-s").value - 1;
 
      var txt1,div1,p1,res1;
 
-     var xDay = new Date(yr,a,dat).getDay();
+     for(var k = 0; k <= a; k++){
+         f_day += mnth1[k];
+     }
+
+     var find_d = (f_day - 1) % 7;
+
+     if((find_d === 0) || (find_d === 1) || (find_d === 2) || (find_d === 3))
+     {
+         var l = find_d + 3;
+     }
+
+     else if((find_d === 4) || (find_d === 5) || (find_d === 6))
+     {
+        var l = find_d - 4;
+     }
+
+
+
+    
+
 
      document.getElementById("mnth-name").innerHTML = mnth[a];
      document.getElementById("mnth-name1").innerHTML = mnth[a];
@@ -118,15 +139,10 @@ function month_dis(){
 
         res1 = div1.appendChild(p1);
 
-        if( (new Date(yr,a,j).getDay() === 0)  || (new Date(yr,a,j).getDay() === 6))
-        {
-            res1.style.color = "red";
-
-        }
 
         if(j === 1)
         {
-            res1.style.gridColumnStart = xDay + 1;
+            res1.style.gridColumnStart = l + 1;
         }
 
         document.querySelector(".mnt-order1").appendChild(res1);
