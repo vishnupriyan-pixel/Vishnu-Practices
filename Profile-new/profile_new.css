@@ -186,6 +186,41 @@ height: 220px;
     height: 220px;
 }
 
+.wrk-bc6{
+    background-image: url(images/acer.jpg);
+    background-size: 413px 221px;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+.wrk-bc7{
+    background-image: url(images/automation.jpg);
+    background-size: 413px 221px;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+.wrk-bc8{
+    background-image: url(images/demoqa1.jpg);
+    background-size: 413px 221px;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+.wrk-bc9{
+    background-image: url(images/jQuery-UI.jpg);
+    background-size: 413px 221px;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
+.wrk-bc10{
+    background-image: url(images/zoh1.jpg);
+    background-size: 413px 221px;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+
 .abt3{
     background-color: rgb(1,87,97);
     height: 250px;
@@ -211,8 +246,27 @@ height: 220px;
     font-size: 18px;
 }
 
+span#p-dts1 > a{
+    text-decoration: none;
+    color: white;
+}
+
+span#p-dts1 > a:hover{
+    color: lightgray;
+}
+
 #ftr{
     font-size: 13.6px;
     letter-spacing: 2.7px;
 
+}
+
+.data2{
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(2,0.7fr);
+    width: 70%;
+    height: auto;
+    grid-column-gap: 45px;
+    grid-row-gap: 70px;
 }
