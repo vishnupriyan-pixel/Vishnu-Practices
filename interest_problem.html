@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let amount = 100;
+        var find_date = new Date();
+        var after_month = new Date(find_date);
+        after_month.setDate(after_month.getDate()+30);
+        console.log(after_month);
+        //////
+      
+        var simple_interest;
+
+            var personA_interest = 0.066;
+            var personB_interest = 0.066;
+            var time_period = [28,30,31];
+            if(time_period[0]){
+                simple_interest = (amount * time_period[0] * personA_interest*1/12);
+                let near_value_interest = simple_interest.toFixed(2);
+                console.log("The Interest that Person A gives : " + near_value_interest);
+                simple_interest_b = (amount * time_period[0] * personB_interest*1/12);
+                let near_value_interest1 = simple_interest_b.toFixed(2);
+                console.log("The Interest that Person B gives : " + near_value_interest1);
+                console.log("-----------------------------------------");
+                console.log(Math.max(near_value_interest,near_value_interest1) + " " + "Therefore,Person B gives more interest");
+            }
+            console.log("-----------------------------------------");
+            if (time_period[1]) {
+                simple_interest = (amount * time_period[1] * personA_interest*1/12);
+                let near_value_interest = simple_interest.toFixed(2);
+                console.log("The Interest that Person A gives : " + near_value_interest);
+                simple_interest_b = (amount * time_period[1] * personB_interest*1/12);
+                let near_value_interest1 = simple_interest_b.toFixed(2);
+                console.log("The Interest that Person B gives : " + near_value_interest1);
+                console.log("-----------------------------------------");
+                console.log(Math.max(near_value_interest,near_value_interest1) + " " + "Therefore,Person B gives more interest");
+            } 
+            console.log("-----------------------------------------");
+            if(time_period[2]) {
+                simple_interest = (amount * time_period[2] * personA_interest*1/12);
+                let near_value_interest = simple_interest.toFixed(2);
+                console.log("The Interest that Person A gives : " + near_value_interest);
+                simple_interest_b = (amount * time_period[2] * personB_interest*1/12);
+                let near_value_interest1 = simple_interest_b.toFixed(2);
+                console.log("The Interest that Person B gives : " + near_value_interest1);
+                console.log("-----------------------------------------");
+                console.log(Math.max(near_value_interest,near_value_interest1) + " " + "Therefore,Person B gives more interest");
+            }
+           
+           
+
+        
+        
+    </script>
+</body>
+</html>
